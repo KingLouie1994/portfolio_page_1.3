@@ -11,6 +11,13 @@ const GlobalStyle = createGlobalStyle`
 
 body{
     max-width: 100vw;
+    background: #8ed3f4;
+}
+
+p{
+    @media (max-width: 1000px) and (orientation: landscape) {
+        font-size: 24px;
+    }
 }
 `;
 
