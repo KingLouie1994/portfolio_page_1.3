@@ -2,7 +2,7 @@
 import Welcome from "./components/Welcome";
 
 // Imports for styling
-import GlobalStyle from "./styling/GlobalStyle";
+import GlobalStyle from "./styles/GlobalStyle";
 
 function App() {
   return (
