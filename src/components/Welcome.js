@@ -49,8 +49,7 @@ const Welcome = () => {
             <StyledWelcomeSkills>
               <p>{"<h2>"}</p>
               <h2>
-                JavaScript | TypeScript | React.js | React Native | Redux |
-                Ionic | Node.js | Express.js | MongoDB | MySQL | Python
+                Front End & Back End - For small and large projects of all kinds
               </h2>
               <p>{"</h2>"}</p>
             </StyledWelcomeSkills>
