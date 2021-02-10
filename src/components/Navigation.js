@@ -1,3 +1,6 @@
+// Imports from React
+import React, { useState } from "react";
+
 // Imports of Icons
 import { Linkedin, GitHub, Home, User, Eye, Mail, Link } from "react-feather";
 
@@ -5,21 +8,85 @@ import { Linkedin, GitHub, Home, User, Eye, Mail, Link } from "react-feather";
 import styled from "styled-components";
 
 const Navigation = () => {
+  const [hoverStatusHome, setHoverStatusHome] = useState(false);
+  const [hoverStatusAbout, setHoverStatusAbout] = useState(false);
+  const [hoverStatusWork, setHoverStatusWork] = useState(false);
+  const [hoverStatusContact, setHoverStatusContact] = useState(false);
+
+  const [hoverStatusLinkedIn, setHoverStatusLinkedIn] = useState(false);
+  const [hoverStatusGitHub, setHoverStatusGitHub] = useState(false);
+
   return (
     <StyledNavigation>
       <StyledNavigationLogo>Logo</StyledNavigationLogo>
       <StyledNavigationAnchors>
-        <Home color="#ed6f22" size={30} stroke-width={1} />
-        <User color="white" size={30} stroke-width={1} />
-        <Eye color="white" size={30} stroke-width={1} />
-        <Mail color="white" size={30} stroke-width={1} />
+        <ul>
+          <li
+            onMouseEnter={() => setHoverStatusHome(true)}
+            onMouseLeave={() => setHoverStatusHome(false)}
+          >
+            {hoverStatusHome ? (
+              <p>Home</p>
+            ) : (
+              <Home color="#ed6f22" size={30} stroke-width={1} />
+            )}
+          </li>
+          <li
+            onMouseEnter={() => setHoverStatusAbout(true)}
+            onMouseLeave={() => setHoverStatusAbout(false)}
+          >
+            {hoverStatusAbout ? (
+              <p>About</p>
+            ) : (
+              <User color="white" size={30} stroke-width={1} />
+            )}
+          </li>
+          <li
+            onMouseEnter={() => setHoverStatusWork(true)}
+            onMouseLeave={() => setHoverStatusWork(false)}
+          >
+            {hoverStatusWork ? (
+              <p>Work</p>
+            ) : (
+              <Eye color="white" size={30} stroke-width={1} />
+            )}
+          </li>
+          <li
+            onMouseEnter={() => setHoverStatusContact(true)}
+            onMouseLeave={() => setHoverStatusContact(false)}
+          >
+            {hoverStatusContact ? (
+              <p>Contact</p>
+            ) : (
+              <Mail color="white" size={30} stroke-width={1} />
+            )}
+          </li>
+        </ul>
       </StyledNavigationAnchors>
       <StyledNavigationSocial>
-        <a href="https://www.linkedin.com/in/luisschekerka/" target="_blank">
-          <Linkedin color="white" size={20} stroke-width={1} />
+        <a
+          href="https://www.linkedin.com/in/luisschekerka/"
+          target="_blank"
+          onMouseEnter={() => setHoverStatusLinkedIn(true)}
+          onMouseLeave={() => setHoverStatusLinkedIn(false)}
+        >
+          <Linkedin
+            color={hoverStatusLinkedIn ? "#ed6f22" : "white"}
+            size={20}
+            stroke-width={1}
+          />
         </a>
-        <a href="https://github.com/KingLouie1994" target="_blank">
-          <GitHub color="white" size={20} stroke-width={1} />
+        <a
+          href="https://github.com/KingLouie1994"
+          target="_blank"
+          onMouseEnter={() => setHoverStatusGitHub(true)}
+          onMouseLeave={() => setHoverStatusGitHub(false)}
+        >
+          <GitHub
+            color={hoverStatusGitHub ? "#ed6f22" : "white"}
+            size={20}
+            stroke-width={1}
+          />
         </a>
       </StyledNavigationSocial>
     </StyledNavigation>
@@ -115,17 +182,35 @@ const StyledNavigationAnchors = styled.nav`
   width: 100%;
   height: 40%;
   margin: 30% 0 30% 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    p {
+      font-family: "Julius Sans One", sans-serif;
+      color: #ed6f22;
+    }
+  }
+  li {
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
   @media (orientation: portrait) {
-    width: 60%;
     height: 100%;
     margin: 0;
-    position: absolute;
-    right: 0;
-    flex-direction: row;
+    ul {
+      width: 80%;
+      position: absolute;
+      right: 0;
+      flex-direction: row;
+    }
   }
 `;
 
