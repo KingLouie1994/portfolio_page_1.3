@@ -1,4 +1,5 @@
 // Imports of components
+import Navigation from "./components/Navigation";
 import Welcome from "./components/Welcome";
 
 // Imports for styling
@@ -8,6 +9,7 @@ function App() {
   return (
     <div>
       <GlobalStyle />
+      <Navigation />
       <Welcome />
     </div>
   );
