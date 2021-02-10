@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 body{
     max-width: 100vw;
     background: #8ed3f4;
+    color: white;
 }
 
 p{
