@@ -33,7 +33,7 @@ const Welcome = () => {
         </Reject>
       </RejectContainer>
       <StyledWelcome style={{ height: dimensions.height }}>
-        <StyledWelcomeBodyTags style={{ height: dimensions.height }}>
+        <StyledWelcomeLeft style={{ height: dimensions.height }}>
           <p>{"<body>"}</p>
           <StyledWelcomeText>
             <StyledWelcomeGreeting>
@@ -62,23 +62,16 @@ const Welcome = () => {
             <p>{"</button>"}</p>
           </StyledWelcomeText>
           <p>{"</body>"}</p>
-        </StyledWelcomeBodyTags>
+        </StyledWelcomeLeft>
+        {/* <StyledWelcomeRight>
+          <h1>LOL</h1>
+        </StyledWelcomeRight> */}
       </StyledWelcome>
     </React.Fragment>
   );
 };
 
 // Styled components
-const StyledWelcome = styled.div`
-  width: 100vw;
-  background: linear-gradient(to right, #00397f, #26aee5);
-  display: flex;
-  overflow: hidden;
-  @media (max-width: 1000px) and (orientation: landscape) {
-    display: none;
-  }
-`;
-
 const RejectContainer = styled.div`
   height: 100vh;
   width: 100vw;
@@ -119,7 +112,17 @@ const Reject = styled.div`
   }
 `;
 
-const StyledWelcomeBodyTags = styled.div`
+const StyledWelcome = styled.div`
+  width: 100vw;
+  background: linear-gradient(to right, #00397f, #26aee5);
+  display: flex;
+  @media (max-width: 1000px) and (orientation: landscape) {
+    display: none;
+  }
+`;
+
+const StyledWelcomeLeft = styled.div`
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -130,26 +133,46 @@ const StyledWelcomeBodyTags = styled.div`
     color: #8ed3f4;
     font-family: "La Belle Aurore", cursive;
   }
+  @media (max-width: 2100px) and (orientation: landscape) {
+    left: 3.5vw;
+  }
+  @media (max-width: 1900px) and (orientation: landscape) {
+    left: 4vw;
+  }
+  @media (max-width: 1700px) and (orientation: landscape) {
+    left: 4.5vw;
+  }
+  @media (max-width: 1600px) and (orientation: landscape) {
+    left: 5vw;
+  }
+  @media (max-width: 1400px) and (orientation: landscape) {
+    left: 5.5vw;
+  }
+  @media (max-width: 1200px) and (orientation: landscape) {
+    left: 6vw;
+  }
   @media (orientation: portrait) {
-    padding: 5vh 0 2vh 1vh;
+    right: 3vw;
+    width: 94vw;
+    padding: 5vh 1vh 2vh 1vh;
   }
   @media (max-width: 1800px) and (orientation: portrait) {
-    padding: 7vh 0 2vh 1vh;
+    padding: 7vh 1vh 2vh 1vh;
   }
   @media (max-width: 1400px) and (orientation: portrait) {
-    padding: 8vh 0 2vh 1vh;
+    padding: 8vh 1vh 2vh 1vh;
   }
   @media (max-width: 1200px) and (orientation: portrait) {
-    padding: 9vh 0 2vh 1vh;
+    padding: 9vh 1vh 2vh 1vh;
   }
   @media (max-width: 1000px) and (orientation: portrait) {
-    padding: 10vh 0 2vh 1vh;
+    padding: 10vh 1vh 2vh 1vh;
   }
   @media (max-width: 800px) and (orientation: portrait) {
-    padding: 11vh 0 2vh 1vh;
+    padding: 11vh 1vh 2vh 1vh;
   }
   @media (max-width: 600px) and (orientation: portrait) {
-    padding: 12vh 0 2vh 1vh;
+    padding: 12vh 1vh 2vh 1vh;
   }
 `;
 
@@ -167,11 +190,15 @@ const StyledWelcomeText = styled.div`
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
   }
+  @media (max-width: 500px) {
+    button {
+      width: 47%;
+    }
+  }
 `;
 
 const StyledWelcomeGreeting = styled.div`
   h1 {
-    font-size: 60px;
     padding-left: 1vw;
     font-family: "Allerta Stencil", sans-serif;
   }
@@ -180,10 +207,42 @@ const StyledWelcomeGreeting = styled.div`
 const StyledWelcomeSkills = styled.div`
   padding: 2vw 0vw 2vw 0vw;
   h2 {
-    font-size: 18px;
     padding-left: 1vw;
     font-family: "Open Sans", sans-serif;
     font-weight: lighter;
+  }
+`;
+
+const StyledWelcomeRight = styled.div`
+  width: 47vw;
+  position: absolute;
+  left: 53vw;
+  @media (max-width: 2100px) and (orientation: landscape) {
+    left: 53.5vw;
+    width: 46.5vw;
+  }
+  @media (max-width: 1900px) and (orientation: landscape) {
+    left: 54vw;
+    width: 46;
+  }
+  @media (max-width: 1700px) and (orientation: landscape) {
+    left: 54.5vw;
+    width: 45.5vw;
+  }
+  @media (max-width: 1600px) and (orientation: landscape) {
+    left: 55vw;
+    width: 45vw;
+  }
+  @media (max-width: 1400px) and (orientation: landscape) {
+    left: 55.5vw;
+    width: 44.5vw;
+  }
+  @media (max-width: 1200px) and (orientation: landscape) {
+    left: 56vw;
+    width: 44vw;
+  }
+  @media (orientation: portrait) {
+    display: none;
   }
 `;
 
