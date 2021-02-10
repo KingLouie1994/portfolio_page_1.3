@@ -1,6 +1,9 @@
 // Imports from React
 import React, { useState, useEffect } from "react";
 
+// Imports of components
+import Languages from "./Languages";
+
 // Imports of Icons
 import { RotateCcw } from "react-feather";
 
@@ -63,9 +66,9 @@ const Welcome = () => {
           </StyledWelcomeText>
           <p>{"</body>"}</p>
         </StyledWelcomeLeft>
-        {/* <StyledWelcomeRight>
-          <h1>LOL</h1>
-        </StyledWelcomeRight> */}
+        <StyledWelcomeRight>
+          <Languages />
+        </StyledWelcomeRight>
       </StyledWelcome>
     </React.Fragment>
   );
