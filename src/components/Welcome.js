@@ -33,7 +33,10 @@ const Welcome = () => {
         </Reject>
       </RejectContainer>
       <StyledWelcome style={{ height: dimensions.height }}>
-        <h1>Welcome to the jungle!</h1>
+        <StyledWelcomeText style={{ height: dimensions.height }}>
+          <p>{"<body>"}</p>
+          <p>{"</body>"}</p>
+        </StyledWelcomeText>
       </StyledWelcome>
     </React.Fragment>
   );
@@ -44,8 +47,6 @@ const StyledWelcome = styled.div`
   width: 100vw;
   background: linear-gradient(to right, #00397f, #26aee5);
   display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   @media (max-width: 1000px) and (orientation: landscape) {
     display: none;
@@ -89,6 +90,40 @@ const Reject = styled.div`
   }
   @media (min-width: 1000px) {
     display: none;
+  }
+`;
+
+const StyledWelcomeText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 3vw;
+  padding: 2vw 0 2vw 1vw;
+  p {
+    color: #8ed3f4;
+    font-family: "La Belle Aurore", cursive;
+  }
+  @media (orientation: portrait) {
+    padding: 5vh 0 2vh 1vh;
+  }
+  @media (max-width: 1800px) and (orientation:portrait){
+    padding: 7vh 0 2vh 1vh;
+  }
+  @media (max-width: 1400px) and (orientation:portrait){
+    padding: 8vh 0 2vh 1vh;
+  }
+  @media (max-width: 1200px) and (orientation:portrait){
+    padding: 9vh 0 2vh 1vh;
+  }
+  @media (max-width: 1000px) and (orientation:portrait){
+    padding: 10vh 0 2vh 1vh;
+  }
+  @media (max-width: 800px) and (orientation:portrait){
+    padding: 11vh 0 2vh 1vh;
+  }
+  @media (max-width: 600px) and (orientation:portrait){
+    padding: 12vh 0 2vh 1vh;
   }
 `;
 
