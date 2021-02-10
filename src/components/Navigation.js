@@ -2,11 +2,17 @@
 import styled from "styled-components";
 
 const Navigation = () => {
-  return <StyledNavigation></StyledNavigation>;
+  return (
+    <StyledNavigation>
+      <StyledNavigationLogo>Logo</StyledNavigationLogo>
+    </StyledNavigation>
+  );
 };
 
 // Styled components
 const StyledNavigation = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 3vw;
   height: 100vh;
   position: fixed;
@@ -37,6 +43,8 @@ const StyledNavigation = styled.div`
     display: none;
   }
   @media (orientation: portrait) {
+    display: flex;
+    flex-direction: row;
     width: 100vw;
     height: 3vh;
   }
@@ -63,6 +71,25 @@ const StyledNavigation = styled.div`
   @media (max-height: 600px) and (orientation: portrait) {
     width: 100vw;
     height: 10vh;
+  }
+`;
+
+const StyledNavigationLogo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  padding: 10px;
+  background: black;
+  // Just as long as there is no logo
+  font-family: "Julius Sans One", sans-serif;
+  @media (orientation: portrait) {
+    height: 100%;
+    width: auto;
   }
 `;
 

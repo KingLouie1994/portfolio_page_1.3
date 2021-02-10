@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 // Imports of Icons
-import ScreenRotationIcon from "@material-ui/icons/ScreenRotation";
+import { RotateCcw } from "react-feather";
 
 // Imports for styling
 import styled from "styled-components";
@@ -26,7 +26,7 @@ const Welcome = () => {
     <React.Fragment>
       <RejectContainer style={{ height: dimensions.height }}>
         <Reject style={{ height: dimensions.height * 0.8 }}>
-          <ScreenRotationIcon style={{ fontSize: 80 }} />
+          <RotateCcw size={60} />
           <p style={{ paddingTop: 40 }}>
             Please rotate your phone or use a larger device to visit the site
           </p>
