@@ -393,6 +393,15 @@ const JavaScriptIcon = styled.svg`
   position: absolute;
   left: 17%;
   top: 25vh;
+  @media (max-width: 2100px) {
+    width: 70px;
+  }
+  @media (max-width: 1600px) {
+    width: 60px;
+  }
+  @media (max-width: 1200px) {
+    width: 40px;
+  }
 `;
 
 const TypeScriptIcon = styled.svg`
@@ -401,6 +410,15 @@ const TypeScriptIcon = styled.svg`
   position: absolute;
   left: 76%;
   top: 27vh;
+  @media (max-width: 2100px) {
+    width: 70px;
+  }
+  @media (max-width: 1600px) {
+    width: 60px;
+  }
+  @media (max-width: 1200px) {
+    width: 40px;
+  }
 `;
 
 const ReactIcon = styled.svg`
@@ -408,6 +426,15 @@ const ReactIcon = styled.svg`
   position: absolute;
   left: 55%;
   top: 20vh;
+  @media (max-width: 2100px) {
+    width: 70px;
+  }
+  @media (max-width: 1600px) {
+    width: 60px;
+  }
+  @media (max-width: 1200px) {
+    width: 40px;
+  }
 `;
 
 const ReduxIcon = styled.svg`
@@ -415,6 +442,15 @@ const ReduxIcon = styled.svg`
   position: absolute;
   left: 35%;
   top: 21vh;
+  @media (max-width: 2100px) {
+    width: 70px;
+  }
+  @media (max-width: 1600px) {
+    width: 60px;
+  }
+  @media (max-width: 1200px) {
+    width: 40px;
+  }
 `;
 
 const IonicIcon = styled.svg`
@@ -422,6 +458,15 @@ const IonicIcon = styled.svg`
   position: absolute;
   top: 38vh;
   left: 13%;
+  @media (max-width: 2100px) {
+    width: 85px;
+  }
+  @media (max-width: 1600px) {
+    width: 70px;
+  }
+  @media (max-width: 1200px) {
+    width: 50px;
+  }
 `;
 
 const NodeIcon = styled.svg`
@@ -429,6 +474,15 @@ const NodeIcon = styled.svg`
   position: absolute;
   left: 43%;
   top: 30vh;
+  @media (max-width: 2100px) {
+    width: 85px;
+  }
+  @media (max-width: 1600px) {
+    width: 70px;
+  }
+  @media (max-width: 1200px) {
+    width: 50px;
+  }
 `;
 
 const ExpressIcon = styled.svg`
@@ -436,6 +490,15 @@ const ExpressIcon = styled.svg`
   position: absolute;
   left: 60%;
   top: 40vh;
+  @media (max-width: 2100px) {
+    width: 85px;
+  }
+  @media (max-width: 1600px) {
+    width: 70px;
+  }
+  @media (max-width: 1200px) {
+    width: 50px;
+  }
 `;
 
 const MongoIcon = styled.svg`
@@ -443,6 +506,15 @@ const MongoIcon = styled.svg`
   position: absolute;
   left: 80%;
   top: 46vh;
+  @media (max-width: 2100px) {
+    width: 80px;
+  }
+  @media (max-width: 1600px) {
+    width: 65px;
+  }
+  @media (max-width: 1200px) {
+    width: 45px;
+  }
 `;
 
 const MySQLIcon = styled.svg`
@@ -450,6 +522,15 @@ const MySQLIcon = styled.svg`
   position: absolute;
   left: 38%;
   top: 44vh;
+  @media (max-width: 2100px) {
+    width: 80px;
+  }
+  @media (max-width: 1600px) {
+    width: 65px;
+  }
+  @media (max-width: 1200px) {
+    width: 45px;
+  }
 `;
 
 const PostGreIcon = styled.svg`
@@ -457,6 +538,15 @@ const PostGreIcon = styled.svg`
   position: absolute;
   left: 13%;
   top: 52vh;
+  @media (max-width: 2100px) {
+    width: 70px;
+  }
+  @media (max-width: 1600px) {
+    width: 60px;
+  }
+  @media (max-width: 1200px) {
+    width: 40px;
+  }
 `;
 
 const PythonIcon = styled.svg`
@@ -464,6 +554,15 @@ const PythonIcon = styled.svg`
   position: absolute;
   left: 77%;
   top: 65vh;
+  @media (max-width: 2100px) {
+    width: 70px;
+  }
+  @media (max-width: 1600px) {
+    width: 60px;
+  }
+  @media (max-width: 1200px) {
+    width: 40px;
+  }
 `;
 
 const GitIcon = styled.svg`
@@ -471,6 +570,15 @@ const GitIcon = styled.svg`
   position: absolute;
   left: 45%;
   top: 72vh;
+  @media (max-width: 2100px) {
+    width: 80px;
+  }
+  @media (max-width: 1600px) {
+    width: 65px;
+  }
+  @media (max-width: 1200px) {
+    width: 45px;
+  }
 `;
 
 const GitHubIcon = styled.svg`
@@ -478,6 +586,15 @@ const GitHubIcon = styled.svg`
   position: absolute;
   left: 18%;
   top: 67vh;
+  @media (max-width: 2100px) {
+    width: 70px;
+  }
+  @media (max-width: 1600px) {
+    width: 60px;
+  }
+  @media (max-width: 1200px) {
+    width: 40px;
+  }
 `;
 
 const AmazonIcon = styled.svg`
@@ -485,6 +602,15 @@ const AmazonIcon = styled.svg`
   position: absolute;
   left: 58%;
   top: 58vh;
+  @media (max-width: 2100px) {
+    width: 85px;
+  }
+  @media (max-width: 1600px) {
+    width: 70px;
+  }
+  @media (max-width: 1200px) {
+    width: 50px;
+  }
 `;
 
 const NpmIcon = styled.svg`
@@ -492,6 +618,15 @@ const NpmIcon = styled.svg`
   position: absolute;
   left: 38%;
   top: 56vh;
+  @media (max-width: 2100px) {
+    width: 70px;
+  }
+  @media (max-width: 1600px) {
+    width: 60px;
+  }
+  @media (max-width: 1200px) {
+    width: 40px;
+  }
 `;
 
 export default Languages;

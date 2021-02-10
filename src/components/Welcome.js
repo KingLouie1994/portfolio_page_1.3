@@ -193,6 +193,11 @@ const StyledWelcomeText = styled.div`
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
   }
+  @media (max-width: 1200px) {
+    button {
+      width: 30%;
+    }
+  }
   @media (max-width: 500px) {
     button {
       width: 47%;
