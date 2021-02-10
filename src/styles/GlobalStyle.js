@@ -17,6 +17,12 @@ body{
 
 h1 {
     font-size: 60px;
+    @media (max-width: 1400px) {
+        font-size: 50px
+    }
+    @media (max-width: 1200px) {
+        font-size: 45px
+    }
     @media (max-width: 600px) {
         font-size: 40px
     }
@@ -27,6 +33,9 @@ h1 {
 
 h2 {
     font-size: 18px;
+    @media (max-width: 1200px) {
+        font-size: 16px
+    }
     @media (max-width: 400px) {
         font-size: 14px
     }

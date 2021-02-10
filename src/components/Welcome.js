@@ -1,6 +1,9 @@
 // Imports from React
 import React, { useState, useEffect } from "react";
 
+// Imports of components
+import Languages from "./Languages";
+
 // Imports of Icons
 import { RotateCcw } from "react-feather";
 
@@ -46,8 +49,7 @@ const Welcome = () => {
             <StyledWelcomeSkills>
               <p>{"<h2>"}</p>
               <h2>
-                JavaScript | TypeScript | React.js | React Native | Redux |
-                Ionic | Node.js | Express.js | MongoDB | MySQL | Python
+                Front End & Back End - For small and large projects of all kinds
               </h2>
               <p>{"</h2>"}</p>
             </StyledWelcomeSkills>
@@ -63,9 +65,9 @@ const Welcome = () => {
           </StyledWelcomeText>
           <p>{"</body>"}</p>
         </StyledWelcomeLeft>
-        {/* <StyledWelcomeRight>
-          <h1>LOL</h1>
-        </StyledWelcomeRight> */}
+        <StyledWelcomeRight>
+          <Languages />
+        </StyledWelcomeRight>
       </StyledWelcome>
     </React.Fragment>
   );
@@ -189,6 +191,11 @@ const StyledWelcomeText = styled.div`
     margin-left: 1vw;
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
+  }
+  @media (max-width: 1200px) {
+    button {
+      width: 30%;
+    }
   }
   @media (max-width: 500px) {
     button {
