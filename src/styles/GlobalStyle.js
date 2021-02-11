@@ -55,12 +55,6 @@ h2 {
         font-size: 14px
     }
 }
-
-p{
-    @media (max-width: 1000px) and (orientation: landscape) {
-        font-size: 24px;
-    }
-}
 `;
 
 export default GlobalStyle;

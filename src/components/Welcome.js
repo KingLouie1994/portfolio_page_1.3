@@ -80,7 +80,7 @@ const Welcome = () => {
 // Styled components
 const NavAnchorWelcome = styled.div`
   position: absolute;
-  top: 0;
+  top: 0vh;
 `;
 
 const RejectContainer = styled.div`
@@ -141,6 +141,7 @@ const StyledWelcomeLeft = styled.div`
   left: 3vw;
   padding: 2vw 0 2vw 1vw;
   p {
+    font-size: 16px;
     color: #8ed3f4;
     font-family: "La Belle Aurore", cursive;
   }

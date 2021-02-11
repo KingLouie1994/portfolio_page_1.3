@@ -261,6 +261,11 @@ const StyledNavigationAnchors = styled.nav`
       flex-direction: row;
     }
   }
+  @media (max-width: 1200px) and (orientation: landscape) {
+    p {
+      font-size: 12px;
+    }
+  }
 `;
 
 const StyledNavigationSocial = styled.div`
