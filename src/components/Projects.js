@@ -19,15 +19,26 @@ const Projects = () => {
     window.addEventListener("resize", handleResize);
   });
   return (
-    <StyledProjects style={{ height: dimensions.height }}>
-      <StyledProjectsLeft style={{ height: dimensions.height }}>
-        <h1>Projects</h1>
-      </StyledProjectsLeft>
-    </StyledProjects>
+    <React.Fragment>
+      <NavAnchorProjects
+        style={{ height: dimensions.height }}
+        id="projects"
+      ></NavAnchorProjects>
+      <StyledProjects style={{ height: dimensions.height }}>
+        <StyledProjectsLeft style={{ height: dimensions.height }}>
+          <h1>Projects</h1>
+        </StyledProjectsLeft>
+      </StyledProjects>
+    </React.Fragment>
   );
 };
 
 // Styled components
+const NavAnchorProjects = styled.div`
+  position: absolute;
+  top: 200vh;
+`;
+
 const StyledProjects = styled.div`
   width: 100vw;
   background: linear-gradient(to right, #00397f, #26aee5);

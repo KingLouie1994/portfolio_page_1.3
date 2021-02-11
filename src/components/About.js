@@ -19,15 +19,26 @@ const About = () => {
     window.addEventListener("resize", handleResize);
   });
   return (
-    <StyledAbout style={{ height: dimensions.height }}>
-      <StyledAboutLeft style={{ height: dimensions.height }}>
-        <h1>About</h1>
-      </StyledAboutLeft>
-    </StyledAbout>
+    <React.Fragment>
+      <NavAnchorAbout
+        style={{ height: dimensions.height }}
+        id="about"
+      ></NavAnchorAbout>
+      <StyledAbout style={{ height: dimensions.height }}>
+        <StyledAboutLeft style={{ height: dimensions.height }}>
+          <h1>About</h1>
+        </StyledAboutLeft>
+      </StyledAbout>
+    </React.Fragment>
   );
 };
 
 // Styled components
+const NavAnchorAbout = styled.div`
+  position: absolute;
+  top: 100vh;
+`;
+
 const StyledAbout = styled.div`
   width: 100vw;
   background: linear-gradient(to right, #00397f, #26aee5);

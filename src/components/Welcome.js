@@ -27,6 +27,10 @@ const Welcome = () => {
 
   return (
     <React.Fragment>
+      <NavAnchorWelcome
+        style={{ height: dimensions.height }}
+        id="welcome"
+      ></NavAnchorWelcome>
       <RejectContainer style={{ height: dimensions.height }}>
         <Reject style={{ height: dimensions.height * 0.8 }}>
           <RotateCcw size={60} />
@@ -74,6 +78,11 @@ const Welcome = () => {
 };
 
 // Styled components
+const NavAnchorWelcome = styled.div`
+  position: absolute;
+  top: 0;
+`;
+
 const RejectContainer = styled.div`
   height: 100vh;
   width: 100vw;
