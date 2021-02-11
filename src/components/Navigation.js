@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 // Imports of Icons
-import { Linkedin, GitHub, Home, User, Eye, Mail, Link } from "react-feather";
+import { Linkedin, GitHub, Home, User, Eye, Mail } from "react-feather";
 
 // Imports for styling
 import styled from "styled-components";
