@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
 body{
     max-width: 100vw;
+    overflow-x: hidden;
     background: #8ed3f4;
     color: white;
     font-family: "Open Sans", sans-serif;
