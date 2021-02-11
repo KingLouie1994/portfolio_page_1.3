@@ -13,6 +13,8 @@ body{
     max-width: 100vw;
     background: #8ed3f4;
     color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
 }
 
 h1 {
