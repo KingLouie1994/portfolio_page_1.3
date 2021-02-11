@@ -63,7 +63,7 @@ const Welcome = () => {
             </a>
             <p>{"</button>"}</p>
           </StyledWelcomeText>
-          <p>{"</body>"}</p>
+          <div></div>
         </StyledWelcomeLeft>
         <StyledWelcomeRight>
           <Languages />

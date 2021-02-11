@@ -20,7 +20,7 @@ const About = () => {
   });
   return (
     <StyledAbout style={{ height: dimensions.height }}>
-      <StyledAboutLeft>
+      <StyledAboutLeft style={{ height: dimensions.height }}>
         <h1>About</h1>
       </StyledAboutLeft>
     </StyledAbout>
@@ -41,7 +41,7 @@ const StyledAboutLeft = styled.div`
   width: 50vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   position: absolute;
   left: 3vw;
   padding: 2vw 0 2vw 1vw;
