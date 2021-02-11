@@ -9,8 +9,21 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
+html{
+    &::-webkit-scrollbar{
+        width: 0.5rem;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #ed6f22;
+    }
+    &::-webkit-scrollbar-track {
+        background: #002552;
+    }
+}
+
 body{
     max-width: 100vw;
+    overflow-x: hidden;
     background: #8ed3f4;
     color: white;
     font-family: "Open Sans", sans-serif;
