@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 // Imports for styling
 import styled from "styled-components";
 
-const Projects = () => {
+const Contact = () => {
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -19,16 +19,16 @@ const Projects = () => {
     window.addEventListener("resize", handleResize);
   });
   return (
-    <StyledProjects style={{ height: dimensions.height }}>
-      <StyledProjectsLeft style={{ height: dimensions.height }}>
-        <h1>Projects</h1>
-      </StyledProjectsLeft>
-    </StyledProjects>
+    <StyledContact style={{ height: dimensions.height }}>
+      <StyledContactLeft style={{ height: dimensions.height }}>
+        <h1>Contact</h1>
+      </StyledContactLeft>
+    </StyledContact>
   );
 };
 
 // Styled components
-const StyledProjects = styled.div`
+const StyledContact = styled.div`
   width: 100vw;
   background: linear-gradient(to right, #00397f, #26aee5);
   display: flex;
@@ -37,7 +37,7 @@ const StyledProjects = styled.div`
   }
 `;
 
-const StyledProjectsLeft = styled.div`
+const StyledContactLeft = styled.div`
   width: 50vw;
   display: flex;
   flex-direction: column;
@@ -92,4 +92,4 @@ const StyledProjectsLeft = styled.div`
   }
 `;
 
-export default Projects;
+export default Contact;
