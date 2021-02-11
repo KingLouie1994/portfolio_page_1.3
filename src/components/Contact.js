@@ -19,15 +19,26 @@ const Contact = () => {
     window.addEventListener("resize", handleResize);
   });
   return (
-    <StyledContact style={{ height: dimensions.height }}>
-      <StyledContactLeft style={{ height: dimensions.height }}>
-        <h1>Contact</h1>
-      </StyledContactLeft>
-    </StyledContact>
+    <React.Fragment>
+      <NavAnchorContact
+        style={{ height: dimensions.height }}
+        id="contact"
+      ></NavAnchorContact>
+      <StyledContact style={{ height: dimensions.height }}>
+        <StyledContactLeft style={{ height: dimensions.height }}>
+          <h1>Contact</h1>
+        </StyledContactLeft>
+      </StyledContact>
+    </React.Fragment>
   );
 };
 
 // Styled components
+const NavAnchorContact = styled.div`
+  position: absolute;
+  top: 300vh;
+`;
+
 const StyledContact = styled.div`
   width: 100vw;
   background: linear-gradient(to right, #00397f, #26aee5);

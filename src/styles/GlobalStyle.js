@@ -24,7 +24,7 @@ html{
 body{
     max-width: 100vw;
     overflow-x: hidden;
-    background: #8ed3f4;
+    background-color: black;
     color: white;
     font-family: "Open Sans", sans-serif;
     font-weight: lighter;
@@ -53,12 +53,6 @@ h2 {
     }
     @media (max-width: 400px) {
         font-size: 14px
-    }
-}
-
-p{
-    @media (max-width: 1000px) and (orientation: landscape) {
-        font-size: 24px;
     }
 }
 `;

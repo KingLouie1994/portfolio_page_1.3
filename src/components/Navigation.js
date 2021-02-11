@@ -1,6 +1,9 @@
 // Imports from React
 import React, { useState } from "react";
 
+// Imports from third party libraries
+import { Link, animateScroll as scroll } from "react-scroll";
+
 // Imports of Icons
 import { Linkedin, GitHub, Home, User, Eye, Mail } from "react-feather";
 
@@ -25,41 +28,81 @@ const Navigation = () => {
             onMouseEnter={() => setHoverStatusHome(true)}
             onMouseLeave={() => setHoverStatusHome(false)}
           >
-            {hoverStatusHome ? (
-              <p>Home</p>
-            ) : (
-              <Home color="#ed6f22" size={30} stroke-width={1} />
-            )}
+            <Link
+              activeClass="active"
+              name="welcome"
+              to="welcome"
+              spy={true}
+              smooth={true}
+              duration={750}
+              className="link"
+            >
+              {hoverStatusHome ? (
+                <p>Home</p>
+              ) : (
+                <Home size={30} stroke-width={1} />
+              )}
+            </Link>
           </li>
           <li
             onMouseEnter={() => setHoverStatusAbout(true)}
             onMouseLeave={() => setHoverStatusAbout(false)}
           >
-            {hoverStatusAbout ? (
-              <p>About</p>
-            ) : (
-              <User color="white" size={30} stroke-width={1} />
-            )}
+            <Link
+              activeClass="active"
+              name="about"
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={750}
+              className="link"
+            >
+              {hoverStatusAbout ? (
+                <p>About</p>
+              ) : (
+                <User size={30} stroke-width={1} />
+              )}
+            </Link>
           </li>
           <li
             onMouseEnter={() => setHoverStatusWork(true)}
             onMouseLeave={() => setHoverStatusWork(false)}
           >
-            {hoverStatusWork ? (
-              <p>Work</p>
-            ) : (
-              <Eye color="white" size={30} stroke-width={1} />
-            )}
+            <Link
+              activeClass="active"
+              name="projects"
+              to="projects"
+              spy={true}
+              smooth={true}
+              duration={750}
+              className="link"
+            >
+              {hoverStatusWork ? (
+                <p>Work</p>
+              ) : (
+                <Eye size={30} stroke-width={1} />
+              )}
+            </Link>
           </li>
           <li
             onMouseEnter={() => setHoverStatusContact(true)}
             onMouseLeave={() => setHoverStatusContact(false)}
           >
-            {hoverStatusContact ? (
-              <p>Contact</p>
-            ) : (
-              <Mail color="white" size={30} stroke-width={1} />
-            )}
+            <Link
+              activeClass="active"
+              name="contact"
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={750}
+              className="link"
+            >
+              {hoverStatusContact ? (
+                <p>Contact</p>
+              ) : (
+                <Mail size={30} stroke-width={1} />
+              )}
+            </Link>
           </li>
         </ul>
       </StyledNavigationAnchors>
@@ -201,6 +244,12 @@ const StyledNavigationAnchors = styled.nav`
     justify-content: center;
     align-items: center;
     padding: 5px;
+    .link {
+      color: white;
+    }
+    .active {
+      color: #ed6f22;
+    }
   }
   @media (orientation: portrait) {
     height: 100%;
@@ -210,6 +259,11 @@ const StyledNavigationAnchors = styled.nav`
       position: absolute;
       right: 0;
       flex-direction: row;
+    }
+  }
+  @media (max-width: 1200px) and (orientation: landscape) {
+    p {
+      font-size: 12px;
     }
   }
 `;
