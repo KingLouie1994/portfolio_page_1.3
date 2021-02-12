@@ -1,6 +1,12 @@
 // Imports from React
 import React, { useState, useEffect } from "react";
 
+// Imports from third party libraries
+import { Link, animateScroll as scroll } from "react-scroll";
+
+// Import of external data
+import Resume from "../Data/Resume.pdf";
+
 // Imports for styling
 import styled from "styled-components";
 
@@ -9,6 +15,7 @@ const About = () => {
     height: window.innerHeight,
     width: window.innerWidth,
   });
+
   useEffect(() => {
     function handleResize() {
       setDimensions({
@@ -18,6 +25,10 @@ const About = () => {
     }
     window.addEventListener("resize", handleResize);
   });
+
+  const scrollToProjects = () => {
+    scroll.scrollTo(dimensions.height * 2);
+  };
   return (
     <React.Fragment>
       <NavAnchorAbout
@@ -49,18 +60,41 @@ const About = () => {
                 much and never before had I developed a passion for something in
                 such a short time.
               </p>
-              <p className="lastParagraph">
+              <p className="paragraph">
                 Immediately after graduation, I looked into different areas of
                 Computer Science and decided to pursue web development. After
                 half a year of auto didactic learning all the basics, I
                 completed a 9-month course as a full stack web developer at{" "}
-                <LambdaLink
+                <StyledAboutLink
                   href="https://lambdaschool.com/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{ color: "#ed6f22" }}
                 >
                   Lambda School
-                </LambdaLink>
+                </StyledAboutLink>
+                .
+              </p>
+              <p className="paragraph">
+                Since then I have been freelancing and offering my skills to
+                companies of all sizes. Whether alone or in a team, for a short
+                term task or a long term project - I am available for consulting
+                and execution.
+              </p>
+              <p className="lastParagraph">
+                If you want to find out more about me, you can take a look at my{" "}
+                <StyledAboutLink
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={Resume}
+                  style={{ color: "#ed6f22" }}
+                >
+                  resume
+                </StyledAboutLink>{" "}
+                or get an overview of my{" "}
+                <span onClick={scrollToProjects} style={{ color: "#ed6f22" }}>
+                  portfolio projects
+                </span>
                 .
               </p>
               <p
@@ -208,8 +242,8 @@ const StyledAboutLeftTextFlow = styled.div`
   }
 `;
 
-const LambdaLink = styled.a`
-  color: "#ed6f22";
+const StyledAboutLink = styled.a`
+  text-decoration: none;
 `;
 
 export default About;
