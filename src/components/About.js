@@ -26,7 +26,53 @@ const About = () => {
       ></NavAnchorAbout>
       <StyledAbout style={{ height: dimensions.height }}>
         <StyledAboutLeft style={{ height: dimensions.height }}>
-          <h1>About</h1>
+          <StyledAboutLeftText>
+            <StyledAboutLeftTextHeading>
+              <p>{"<h1>"}</p>
+              <h1>About me</h1>
+              <p>{"</h1>"}</p>
+            </StyledAboutLeftTextHeading>
+            <StyledAboutLeftTextFlow>
+              <p
+                style={{
+                  fontFamily: "La Belle Aurore, cursive",
+                  color: "#8ed3f4",
+                }}
+              >
+                {"<p>"}
+              </p>
+              <p className="paragraph">
+                It took me 24 years of my life to get in touch with programming
+                for the first time. In the final stages of my B. Sc. in Civil
+                and Environmental Engineering I was faced with a task in the
+                field of data analysis. Never before had I enjoyed something so
+                much and never before had I developed a passion for something in
+                such a short time.
+              </p>
+              <p className="lastParagraph">
+                Immediately after graduation, I looked into different areas of
+                Computer Science and decided to pursue web development. After
+                half a year of auto didactic learning all the basics, I
+                completed a 9-month course as a full stack web developer at{" "}
+                <LambdaLink
+                  href="https://lambdaschool.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Lambda School
+                </LambdaLink>
+                .
+              </p>
+              <p
+                style={{
+                  fontFamily: "La Belle Aurore, cursive",
+                  color: "#8ed3f4",
+                }}
+              >
+                {"</p>"}
+              </p>
+            </StyledAboutLeftTextFlow>
+          </StyledAboutLeftText>
         </StyledAboutLeft>
       </StyledAbout>
     </React.Fragment>
@@ -55,11 +101,7 @@ const StyledAboutLeft = styled.div`
   justify-content: center;
   position: absolute;
   left: 3vw;
-  padding: 2vw 0 2vw 1vw;
-  p {
-    color: #8ed3f4;
-    font-family: "La Belle Aurore", cursive;
-  }
+  padding: 2vw 1vw 2vw 1vw;
   @media (max-width: 2100px) and (orientation: landscape) {
     left: 3.5vw;
   }
@@ -101,6 +143,73 @@ const StyledAboutLeft = styled.div`
   @media (max-width: 600px) and (orientation: portrait) {
     padding: 12vh 1vh 2vh 1vh;
   }
+`;
+
+const StyledAboutLeftText = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 3vw;
+  h1 {
+    padding-left: 1vw;
+  }
+  @media (max-width: 1200px) {
+    h1 {
+      padding: 0 0 3vw 3vw;
+    }
+  }
+  @media (max-width: 400px) {
+    h1 {
+      padding: 0 0 0 5vw;
+    }
+  }
+`;
+
+const StyledAboutLeftTextHeading = styled.div`
+  padding-left: 1vw;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  p {
+    color: #8ed3f4;
+    font-family: "La Belle Aurore", cursive;
+  }
+`;
+
+const StyledAboutLeftTextFlow = styled.div`
+  padding-left: 1vw;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  .paragraph {
+    font-size: 18px;
+    padding: 0 0 1vw 1vw;
+  }
+  .lastParagraph {
+    font-size: 18px;
+    padding: 0 0 0 1vw;
+  }
+  @media (max-width: 1200px) {
+    .paragraph {
+      font-size: 16px;
+      padding: 0 0 3vw 3vw;
+    }
+    .lastParagraph {
+      font-size: 16px;
+      padding: 0 0 0 3vw;
+    }
+  }
+  @media (max-width: 400px) {
+    .paragraph {
+      font-size: 14px;
+      padding: 0 0 5vw 5vw;
+    }
+    .lastParagraph {
+      font-size: 14px;
+      padding: 0 0 0 5vw;
+    }
+  }
+`;
+
+const LambdaLink = styled.a`
+  color: "#ed6f22";
 `;
 
 export default About;

@@ -32,6 +32,7 @@ body{
 
 h1 {
     font-size: 60px;
+    font-family: "Allerta Stencil", sans-serif;
     @media (max-width: 1400px) {
         font-size: 50px
     }
