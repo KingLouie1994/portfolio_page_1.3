@@ -249,11 +249,11 @@ const StyledAboutLeftTextFlow = styled.div`
   }
   @media (max-width: 400px) {
     .paragraph {
-      font-size: 14px;
+      font-size: 12px;
       padding: 0 0 5vw 5vw;
     }
     .lastParagraph {
-      font-size: 14px;
+      font-size: 12px;
       padding: 0 0 0 5vw;
     }
   }
