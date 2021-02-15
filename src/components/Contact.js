@@ -7,6 +7,9 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
+// Import of external data
+import Location from "../Data/Location.png";
+
 // Imports for styling
 import styled from "styled-components";
 
@@ -183,6 +186,27 @@ const Contact = () => {
             <p>{"</html>"}</p>
           </div>
         </StyledContactLeft>
+        <StyledContactRight style={{ height: dimensions.height }}>
+          <StyledContactRightPicture
+            src={Location}
+            alt="Profile Picture"
+            style={{ height: dimensions.height }}
+          />
+          <StyledContactRightAddress>
+            <div>
+              <p>Luis Schekerka,</p>
+              <p>Maria-Louisen-Straße 110</p>
+              <p>22301 Hamburg</p>
+              <p>Germany</p>
+            </div>
+            <div>
+              <p>
+                <span style={{ color: "#ed6f22" }}>@</span>:{" "}
+                luis.schekerka@gmail.com
+              </p>
+            </div>
+          </StyledContactRightAddress>
+        </StyledContactRight>
       </StyledContact>
     </React.Fragment>
   );
@@ -210,7 +234,7 @@ const StyledContactLeft = styled.div`
   justify-content: space-between;
   position: absolute;
   left: 3vw;
-  padding: 2vw 0 2vw 1vw;
+  padding: 1vw 0 1vw 1vw;
   p {
     color: #8ed3f4;
     font-family: "La Belle Aurore", cursive;
@@ -298,6 +322,8 @@ const StyledContactLeftForm = styled.form`
   @media (max-width: 1200px) {
     button {
       width: 30%;
+      height: 30px;
+      padding: 0;
     }
   }
   @media (max-width: 500px) {
@@ -360,6 +386,69 @@ const StyledContactLeftTextarea = styled.textarea`
 
 const StyledContactLink = styled.a`
   text-decoration: none;
+`;
+
+const StyledContactRight = styled.div`
+  width: 47vw;
+  position: absolute;
+  left: 53vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 2100px) and (orientation: landscape) {
+    left: 53.5vw;
+    width: 46.5vw;
+  }
+  @media (max-width: 1900px) and (orientation: landscape) {
+    left: 54vw;
+    width: 46;
+  }
+  @media (max-width: 1700px) and (orientation: landscape) {
+    left: 54.5vw;
+    width: 45.5vw;
+  }
+  @media (max-width: 1600px) and (orientation: landscape) {
+    left: 55vw;
+    width: 45vw;
+  }
+  @media (max-width: 1400px) and (orientation: landscape) {
+    left: 55.5vw;
+    width: 44.5vw;
+  }
+  @media (max-width: 1200px) and (orientation: landscape) {
+    left: 56vw;
+    width: 44vw;
+  }
+  @media (orientation: portrait) {
+    display: none;
+  }
+`;
+
+const StyledContactRightPicture = styled.img`
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+`;
+
+const StyledContactRightAddress = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 280px;
+  height: 200px;
+  left: 20%;
+  top: 100px;
+  color: white;
+  background-color: #002552;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  div{
+    padding: 25px;
+  }
+  p{
+    padding-bottom: 5px;
+  }
 `;
 
 export default Contact;
