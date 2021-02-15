@@ -2,10 +2,11 @@
 import React, { useState, useEffect } from "react";
 
 // Imports from third party libraries
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 
 // Import of external data
 import Resume from "../Data/Resume.pdf";
+import Profile from "../Data/Photo.jpeg";
 
 // Imports for styling
 import styled from "styled-components";
@@ -78,8 +79,8 @@ const About = () => {
               <p className="paragraph">
                 Since then I have been freelancing and offering my skills to
                 companies of all sizes. Whether alone or in a team, for a short
-                term task or a long term project - I am available for consulting
-                and execution.
+                term task or a long term project - I am available for
+                consulting, execution, team building and more.
               </p>
               <p className="lastParagraph">
                 If you want to find out more about me, you can take a look at my{" "}
@@ -108,6 +109,13 @@ const About = () => {
             </StyledAboutLeftTextFlow>
           </StyledAboutLeftText>
         </StyledAboutLeft>
+        <StyledAboutRight style={{ height: dimensions.height }}>
+          <StyledAboutRightPicture
+            src={Profile}
+            alt="Profile Picture"
+            style={{ height: dimensions.height * 0.8 }}
+          />
+        </StyledAboutRight>
       </StyledAbout>
     </React.Fragment>
   );
@@ -244,6 +252,47 @@ const StyledAboutLeftTextFlow = styled.div`
 
 const StyledAboutLink = styled.a`
   text-decoration: none;
+`;
+
+const StyledAboutRight = styled.div`
+  width: 47vw;
+  position: absolute;
+  left: 53vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 2100px) and (orientation: landscape) {
+    left: 53.5vw;
+    width: 46.5vw;
+  }
+  @media (max-width: 1900px) and (orientation: landscape) {
+    left: 54vw;
+    width: 46;
+  }
+  @media (max-width: 1700px) and (orientation: landscape) {
+    left: 54.5vw;
+    width: 45.5vw;
+  }
+  @media (max-width: 1600px) and (orientation: landscape) {
+    left: 55vw;
+    width: 45vw;
+  }
+  @media (max-width: 1400px) and (orientation: landscape) {
+    left: 55.5vw;
+    width: 44.5vw;
+  }
+  @media (max-width: 1200px) and (orientation: landscape) {
+    left: 56vw;
+    width: 44vw;
+  }
+  @media (orientation: portrait) {
+    display: none;
+  }
+`;
+
+const StyledAboutRightPicture = styled.img`
+  width: 80%;
+  object-fit: cover;
 `;
 
 export default About;
