@@ -139,7 +139,7 @@ const StyledWelcomeLeft = styled.div`
   justify-content: space-between;
   position: absolute;
   left: 3vw;
-  padding: 2vw 0 2vw 1vw;
+  padding: 1vw 0 1vw 1vw;
   p {
     font-size: 16px;
     color: #8ed3f4;

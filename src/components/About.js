@@ -152,7 +152,7 @@ const StyledAboutLeft = styled.div`
   justify-content: center;
   position: absolute;
   left: 3vw;
-  padding: 2vw 1vw 2vw 1vw;
+  padding: 1vw 1vw 1vw 1vw;
   @media (max-width: 2100px) and (orientation: landscape) {
     left: 3.5vw;
   }
