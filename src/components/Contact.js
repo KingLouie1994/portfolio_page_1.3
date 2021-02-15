@@ -1,6 +1,9 @@
 // Imports from React
 import React, { useState, useEffect } from "react";
 
+// Imports from third party libraries
+import { useForm } from "react-hook-form";
+
 // Imports for styling
 import styled from "styled-components";
 
@@ -18,6 +21,16 @@ const Contact = () => {
     }
     window.addEventListener("resize", handleResize);
   });
+
+  const { register, errors, handleSubmit, reset } = useForm();
+
+  const onSubmit = async (data) => {
+    console.log("Name: ", data.name);
+    console.log("Email: ", data.email);
+    console.log("Subject: ", data.subject);
+    console.log("Message: ", data.message);
+  };
+
   return (
     <React.Fragment>
       <NavAnchorContact
@@ -39,27 +52,62 @@ const Contact = () => {
             </h2>
             <p>{"</h2>"}</p>
             <p>{"<form>"}</p>
-            <StyledContactLeftForm>
+            <StyledContactLeftForm onSubmit={handleSubmit(onSubmit)} noValidate>
               <StyledContactLeftInput
                 type="text"
                 name="name"
+                ref={register({
+                  required: { value: true, message: "Please enter your name" },
+                  maxLength: {
+                    value: 50,
+                    message: "Please use 50 characters or less",
+                  },
+                })}
                 placeholder="Name"
               />
+              {errors.name && (
+                <span className="errorMessage">{errors.name.message}</span>
+              )}
               <StyledContactLeftInput
                 type="email"
                 name="email"
+                ref={register({
+                  required: true,
+                  pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                })}
                 placeholder="Email adress"
               />
+              {errors.email && (
+                <span className="errorMessage">
+                  Please enter a valid email address
+                </span>
+              )}
               <StyledContactLeftInput
                 type="text"
                 name="subject"
+                ref={register({
+                  required: { value: true, message: "Please enter a subject" },
+                  maxLength: {
+                    value: 75,
+                    message: "Subject cannot exceed 140 characters",
+                  },
+                })}
                 placeholder="Subject"
               />
+              {errors.subject && (
+                <span className="errorMessage">{errors.subject.message}</span>
+              )}
               <StyledContactLeftTextarea
-                rows={6}
+                rows={3}
                 name="message"
+                ref={register({
+                  required: true,
+                })}
                 placeholder="Your message"
               />
+              {errors.message && (
+                <span className="errorMessage">Please enter a message</span>
+              )}
               <button type="submit">Send</button>
             </StyledContactLeftForm>
             <p>{"</form>"}</p>
@@ -176,6 +224,11 @@ const StyledContactLeftForm = styled.form`
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
   }
+  .errorMessage {
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+    color: #8ed3f4;
+  }
   @media (max-width: 1200px) {
     button {
       width: 30%;
@@ -221,7 +274,7 @@ const StyledContactLeftTextarea = styled.textarea`
   background-color: #002552;
   border: 0;
   padding: 15px;
-  margin: 5px 0 10px 0;
+  margin: 5px 0 5px 0;
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
   :focus {
