@@ -26,7 +26,48 @@ const Contact = () => {
       ></NavAnchorContact>
       <StyledContact style={{ height: dimensions.height }}>
         <StyledContactLeft style={{ height: dimensions.height }}>
-          <h1>Contact</h1>
+          <div></div>
+          <StyledContactLeftText>
+            <p>{"<h1>"}</p>
+            <h1>Contact me</h1>
+            <p>{"</h1>"}</p>
+            <p>{"<h2>"}</p>
+            <h2>
+              You can contact me anytime about anything related to web
+              development - web applications, mobile applications, internet
+              presence of yourself or your company.
+            </h2>
+            <p>{"</h2>"}</p>
+            <p>{"<form>"}</p>
+            <StyledContactLeftForm>
+              <StyledContactLeftInput
+                type="text"
+                name="name"
+                placeholder="Name"
+              />
+              <StyledContactLeftInput
+                type="email"
+                name="email"
+                placeholder="Email adress"
+              />
+              <StyledContactLeftInput
+                type="text"
+                name="subject"
+                placeholder="Subject"
+              />
+              <StyledContactLeftTextarea
+                rows={6}
+                name="message"
+                placeholder="Your message"
+              />
+              <button type="submit">Send</button>
+            </StyledContactLeftForm>
+            <p>{"</form>"}</p>
+          </StyledContactLeftText>
+          <div>
+            <p style={{ paddingLeft: "1vw" }}>{"</body>"}</p>
+            <p>{"</html>"}</p>
+          </div>
         </StyledContactLeft>
       </StyledContact>
     </React.Fragment>
@@ -49,10 +90,10 @@ const StyledContact = styled.div`
 `;
 
 const StyledContactLeft = styled.div`
-  width: 50vw;
+  width: 45vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   position: absolute;
   left: 3vw;
   padding: 2vw 0 2vw 1vw;
@@ -100,6 +141,101 @@ const StyledContactLeft = styled.div`
   }
   @media (max-width: 600px) and (orientation: portrait) {
     padding: 12vh 1vh 2vh 1vh;
+  }
+  @media (max-width: 400px) and (orientation: portrait) {
+    p {
+      font-size: 12px;
+    }
+  }
+`;
+
+const StyledContactLeftText = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 3vw;
+  h1 {
+    padding-left: 1vw;
+  }
+  h2 {
+    padding-left: 1vw;
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+  }
+`;
+
+const StyledContactLeftForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  padding-left: 1vw;
+  button {
+    width: 25%;
+    color: #ed6f22;
+    background: none;
+    border: 1px solid #ed6f22;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+  }
+  @media (max-width: 1200px) {
+    button {
+      width: 30%;
+    }
+  }
+  @media (max-width: 500px) {
+    button {
+      width: 47%;
+      height: 25px;
+      padding: 0;
+    }
+  }
+`;
+
+const StyledContactLeftInput = styled.input`
+  width: 100%;
+  height: 50px;
+  color: #ed6f22;
+  background-color: #002552;
+  border: 0;
+  padding: 15px;
+  margin: 5px 0 5px 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  :focus {
+    outline: none;
+    border-bottom: 1px solid #ed6f22;
+  }
+  ::placeholder {
+    color: #ed6f22;
+  }
+  @media (max-width: 800px) {
+    height: 30px;
+  }
+  @media (max-width: 370px) {
+    margin: 2px 0 2px 0;
+  }
+`;
+
+const StyledContactLeftTextarea = styled.textarea`
+  width: 100%;
+  color: #ed6f22;
+  background-color: #002552;
+  border: 0;
+  padding: 15px;
+  margin: 5px 0 10px 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  :focus {
+    outline: none;
+    border-bottom: 1px solid #ed6f22;
+  }
+  ::placeholder {
+    color: #ed6f22;
+  }
+  @media (max-width: 800px) {
+    height: 90px;
+  }
+  @media (max-width: 370px) {
+    height: 45px;
   }
 `;
 
