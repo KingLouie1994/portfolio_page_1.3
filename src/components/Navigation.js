@@ -279,6 +279,7 @@ const StyledNavigationSocial = styled.div`
   bottom: 30px;
   @media (max-width: 2000px) and (orientation: landscape) {
     height: 7%;
+    bottom: 80px;
   }
   @media (max-width: 1200px) and (orientation: landscape) {
     height: 9%;

@@ -28,6 +28,28 @@ body{
     color: white;
     font-family: "Open Sans", sans-serif;
     font-weight: lighter;
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        -webkit-text-fill-color: #ed6f22;
+        -webkit-box-shadow: 0 0 0 0 #002552 inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+    textarea::-webkit-scrollbar {
+        width: 0.3rem;
+    }
+    textarea::-webkit-scrollbar-track {
+        background: #002552;
+    }
+    textarea::-webkit-scrollbar-thumb {
+        background: #ed6f22;
+    }
 }
 
 h1 {

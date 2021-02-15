@@ -41,7 +41,7 @@ const Welcome = () => {
       </RejectContainer>
       <StyledWelcome style={{ height: dimensions.height }}>
         <StyledWelcomeLeft style={{ height: dimensions.height }}>
-          <p>{"<body>"}</p>
+          <p style={{ paddingLeft: "1vw" }}>{"<body>"}</p>
           <StyledWelcomeLeftText>
             <StyledWelcomeLeftTextGreeting>
               <p>{"<h1>"}</p>
@@ -185,6 +185,11 @@ const StyledWelcomeLeft = styled.div`
   }
   @media (max-width: 600px) and (orientation: portrait) {
     padding: 12vh 1vh 2vh 1vh;
+  }
+  @media (max-width: 400px) and (orientation: portrait) {
+    p {
+      font-size: 12px;
+    }
   }
 `;
 

@@ -194,6 +194,11 @@ const StyledAboutLeft = styled.div`
   @media (max-width: 600px) and (orientation: portrait) {
     padding: 12vh 1vh 2vh 1vh;
   }
+  @media (max-width: 400px) and (orientation: portrait) {
+    p {
+      font-size: 12px;
+    }
+  }
 `;
 
 const StyledAboutLeftText = styled.div`
@@ -203,20 +208,9 @@ const StyledAboutLeftText = styled.div`
   h1 {
     padding-left: 1vw;
   }
-  @media (max-width: 1200px) {
-    h1 {
-      padding: 0 0 3vw 3vw;
-    }
-  }
-  @media (max-width: 400px) {
-    h1 {
-      padding: 0 0 0 5vw;
-    }
-  }
 `;
 
 const StyledAboutLeftTextHeading = styled.div`
-  padding-left: 1vw;
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
   p {
@@ -226,7 +220,6 @@ const StyledAboutLeftTextHeading = styled.div`
 `;
 
 const StyledAboutLeftTextFlow = styled.div`
-  padding-left: 1vw;
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
   .paragraph {
@@ -240,21 +233,19 @@ const StyledAboutLeftTextFlow = styled.div`
   @media (max-width: 1200px) {
     .paragraph {
       font-size: 16px;
-      padding: 0 0 3vw 3vw;
+      padding: 0 0 3vw 1vw;
     }
     .lastParagraph {
       font-size: 16px;
-      padding: 0 0 0 3vw;
     }
   }
   @media (max-width: 400px) {
     .paragraph {
       font-size: 12px;
-      padding: 0 0 5vw 5vw;
+      padding: 0 0 5vw 1vw;
     }
     .lastParagraph {
       font-size: 12px;
-      padding: 0 0 0 5vw;
     }
   }
 `;
