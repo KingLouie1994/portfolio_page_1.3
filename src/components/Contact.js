@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 // Imports from third party libraries
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
 // Imports for styling
 import styled from "styled-components";
@@ -25,6 +27,31 @@ const Contact = () => {
 
   const { register, errors, handleSubmit, reset } = useForm();
 
+  const toastifySuccess = () => {
+    toast.success("Message sent!", {
+      position: "bottom-right",
+      autoClose: 10000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      className: "submit-feedback success",
+      toastId: "notifyToast",
+    });
+  };
+
+  const toastifyError = () => {
+    toast.error("Something went wrong, just send me a mail!", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
   const onSubmit = async (data) => {
     try {
       const templateParams = {
@@ -40,11 +67,12 @@ const Contact = () => {
         process.env.REACT_APP_USER_ID
       );
       reset();
+      toastifySuccess();
     } catch (e) {
       console.log(e);
+      toastifyError();
     }
   };
-
 
   return (
     <React.Fragment>
@@ -59,13 +87,13 @@ const Contact = () => {
             <p>{"<h1>"}</p>
             <h1>Contact me</h1>
             <p>{"</h1>"}</p>
-            <p>{"<h2>"}</p>
+            <p>{"<p>"}</p>
             <h2>
               You can contact me anytime about anything related to web
               development - web applications, mobile applications, internet
               presence of yourself or your company.
             </h2>
-            <p>{"</h2>"}</p>
+            <p>{"</p>"}</p>
             <p>{"<form>"}</p>
             <StyledContactLeftForm onSubmit={handleSubmit(onSubmit)} noValidate>
               <StyledContactLeftInput
@@ -124,8 +152,31 @@ const Contact = () => {
                 <span className="errorMessage">Please enter a message</span>
               )}
               <button type="submit">Send</button>
+              <ToastContainer />
             </StyledContactLeftForm>
             <p>{"</form>"}</p>
+            <p>{"<p>"}</p>
+            <h2>
+              Don't want to use the form? Just send me a{" "}
+              <StyledContactLink
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:luis.schekerka@gmail.com"
+                style={{ color: "#ed6f22" }}
+              >
+                mail
+              </StyledContactLink>{" "}
+              or reach out to me on{" "}
+              <StyledContactLink
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/luisschekerka/"
+                style={{ color: "#ed6f22" }}
+              >
+                LinkedIn!
+              </StyledContactLink>
+            </h2>
+            <p>{"</p>"}</p>
           </StyledContactLeftText>
           <div>
             <p style={{ paddingLeft: "1vw" }}>{"</body>"}</p>
@@ -305,6 +356,10 @@ const StyledContactLeftTextarea = styled.textarea`
   @media (max-width: 370px) {
     height: 45px;
   }
+`;
+
+const StyledContactLink = styled.a`
+  text-decoration: none;
 `;
 
 export default Contact;
