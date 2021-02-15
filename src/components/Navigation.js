@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 // Imports from third party libraries
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 // Imports of Icons
 import { Linkedin, GitHub, Home, User, Eye, Mail } from "react-feather";
@@ -40,7 +40,7 @@ const Navigation = () => {
               {hoverStatusHome ? (
                 <p>Home</p>
               ) : (
-                <Home size={30} stroke-width={1} />
+                <Home size={30} strokeWidth={1} />
               )}
             </Link>
           </li>
@@ -60,7 +60,7 @@ const Navigation = () => {
               {hoverStatusAbout ? (
                 <p>About</p>
               ) : (
-                <User size={30} stroke-width={1} />
+                <User size={30} strokeWidth={1} />
               )}
             </Link>
           </li>
@@ -80,7 +80,7 @@ const Navigation = () => {
               {hoverStatusWork ? (
                 <p>Work</p>
               ) : (
-                <Eye size={30} stroke-width={1} />
+                <Eye size={30} strokeWidth={1} />
               )}
             </Link>
           </li>
@@ -100,7 +100,7 @@ const Navigation = () => {
               {hoverStatusContact ? (
                 <p>Contact</p>
               ) : (
-                <Mail size={30} stroke-width={1} />
+                <Mail size={30} strokeWidth={1} />
               )}
             </Link>
           </li>
@@ -116,7 +116,7 @@ const Navigation = () => {
           <Linkedin
             color={hoverStatusLinkedIn ? "#ed6f22" : "white"}
             size={20}
-            stroke-width={1}
+            strokeWidth={1}
           />
         </a>
         <a
@@ -128,7 +128,7 @@ const Navigation = () => {
           <GitHub
             color={hoverStatusGitHub ? "#ed6f22" : "white"}
             size={20}
-            stroke-width={1}
+            strokeWidth={1}
           />
         </a>
       </StyledNavigationSocial>

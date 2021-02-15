@@ -42,21 +42,21 @@ const Welcome = () => {
       <StyledWelcome style={{ height: dimensions.height }}>
         <StyledWelcomeLeft style={{ height: dimensions.height }}>
           <p>{"<body>"}</p>
-          <StyledWelcomeText>
-            <StyledWelcomeGreeting>
+          <StyledWelcomeLeftText>
+            <StyledWelcomeLeftTextGreeting>
               <p>{"<h1>"}</p>
               <h1>Hi,</h1>
               <h1>I'm Luis -</h1>
               <h1>Full Stack Developer</h1>
               <p>{"</h1>"}</p>
-            </StyledWelcomeGreeting>
-            <StyledWelcomeSkills>
+            </StyledWelcomeLeftTextGreeting>
+            <StyledWelcomeLeftTextSkills>
               <p>{"<h2>"}</p>
               <h2>
                 Front End & Back End - For small and large projects of all kinds
               </h2>
               <p>{"</h2>"}</p>
-            </StyledWelcomeSkills>
+            </StyledWelcomeLeftTextSkills>
             <p>{"<button>"}</p>
             <a
               target="_blank"
@@ -66,7 +66,7 @@ const Welcome = () => {
               <button>Contact me!</button>
             </a>
             <p>{"</button>"}</p>
-          </StyledWelcomeText>
+          </StyledWelcomeLeftText>
           <div></div>
         </StyledWelcomeLeft>
         <StyledWelcomeRight>
@@ -188,7 +188,7 @@ const StyledWelcomeLeft = styled.div`
   }
 `;
 
-const StyledWelcomeText = styled.div`
+const StyledWelcomeLeftText = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 3vw;
@@ -214,14 +214,13 @@ const StyledWelcomeText = styled.div`
   }
 `;
 
-const StyledWelcomeGreeting = styled.div`
+const StyledWelcomeLeftTextGreeting = styled.div`
   h1 {
     padding-left: 1vw;
-    font-family: "Allerta Stencil", sans-serif;
   }
 `;
 
-const StyledWelcomeSkills = styled.div`
+const StyledWelcomeLeftTextSkills = styled.div`
   padding: 2vw 0vw 2vw 0vw;
   h2 {
     padding-left: 1vw;
