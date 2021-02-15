@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 // Imports from third party libraries
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
 
 // Imports for styling
 import styled from "styled-components";
@@ -25,11 +26,25 @@ const Contact = () => {
   const { register, errors, handleSubmit, reset } = useForm();
 
   const onSubmit = async (data) => {
-    console.log("Name: ", data.name);
-    console.log("Email: ", data.email);
-    console.log("Subject: ", data.subject);
-    console.log("Message: ", data.message);
+    try {
+      const templateParams = {
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+      };
+      await emailjs.send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_USER_ID
+      );
+      reset();
+    } catch (e) {
+      console.log(e);
+    }
   };
+
 
   return (
     <React.Fragment>
