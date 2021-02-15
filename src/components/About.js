@@ -92,6 +92,15 @@ const About = () => {
                 >
                   resume
                 </StyledAboutLink>{" "}
+                , checkout my{" "}
+                <StyledAboutLink
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/luisschekerka/"
+                  style={{ color: "#ed6f22" }}
+                >
+                  LinkedIn
+                </StyledAboutLink>{" "}
                 or get an overview of my{" "}
                 <span onClick={scrollToProjects} style={{ color: "#ed6f22" }}>
                   portfolio projects
@@ -291,8 +300,26 @@ const StyledAboutRight = styled.div`
 `;
 
 const StyledAboutRightPicture = styled.img`
-  width: 80%;
+  width: 70%;
   object-fit: cover;
+  @media (max-width: 2100px) and (orientation: landscape) {
+    width: 75%;
+  }
+  @media (max-width: 1900px) and (orientation: landscape) {
+    width: 76%;
+  }
+  @media (max-width: 1700px) and (orientation: landscape) {
+    width: 77%;
+  }
+  @media (max-width: 1600px) and (orientation: landscape) {
+    width: 78%;
+  }
+  @media (max-width: 1400px) and (orientation: landscape) {
+    width: 79%;
+  }
+  @media (max-width: 1200px) and (orientation: landscape) {
+    width: 80%;
+  }
 `;
 
 export default About;
