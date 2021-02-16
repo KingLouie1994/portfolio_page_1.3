@@ -73,8 +73,7 @@ const Projects = () => {
           <p>{"</section>"}</p>
         </StyledProjectsContainer>
         <StyledProjectsNext onClick={handleNextProject}>
-          <ArrowRightCircle size={100} strokeWidth={1} color="#002552" />
-          <h6>NEXT</h6>
+          <ArrowRightCircle size={80} strokeWidth={1} color="#002552" />
         </StyledProjectsNext>
         <CircleOne></CircleOne>
         <CircleTwo></CircleTwo>
@@ -168,8 +167,9 @@ const StyledProjectsNext = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  h6 {
-    color: #002552;
+  @media (orientation: portrait) {
+    left: auto;
+    top: 287.5%;
   }
 `;
 
