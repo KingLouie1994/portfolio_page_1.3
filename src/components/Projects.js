@@ -14,11 +14,25 @@ import { ArrowRightCircle } from "react-feather";
 import styled from "styled-components";
 
 const Projects = () => {
-  const [porjectIndex, setProjectIndex] = useState(0);
+  const [projectIndex, setProjectIndex] = useState(0);
 
   const [project, setProject] = useState(
-    projectData.filter((project) => project.id === 0)
+    projectData.filter((project) => project.id === projectIndex)
   );
+
+  const handleNextProject = () => {
+    if (projectIndex < projectData.length - 1) {
+      setProjectIndex(projectIndex + 1);
+      console.log(projectIndex);
+    } else {
+      setProjectIndex(0);
+      console.log(projectIndex);
+    }
+  };
+
+  useEffect(() => {
+    setProject(projectData.filter((project) => project.id === projectIndex));
+  }, [projectIndex]);
 
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
@@ -42,7 +56,7 @@ const Projects = () => {
       <StyledProjects style={{ height: dimensions.height }}>
         <StyledProjectsContainer style={{ height: dimensions.height * 0.8 }}>
           <p>{"<section>"}</p>
-          {projectData.map((project) => (
+          {project.map((project) => (
             <ProjectContainer
               key={project.id}
               id={project.id}
@@ -58,7 +72,7 @@ const Projects = () => {
           ))}
           <p>{"</section>"}</p>
         </StyledProjectsContainer>
-        <StyledProjectsNext>
+        <StyledProjectsNext onClick={handleNextProject}>
           <ArrowRightCircle size={100} strokeWidth={1} color="#002552" />
           <h6>NEXT</h6>
         </StyledProjectsNext>
