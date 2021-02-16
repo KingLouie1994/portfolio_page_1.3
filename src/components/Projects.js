@@ -14,6 +14,12 @@ import { ArrowRightCircle } from "react-feather";
 import styled from "styled-components";
 
 const Projects = () => {
+  const [porjectIndex, setProjectIndex] = useState(0);
+
+  const [project, setProject] = useState(
+    projectData.filter((project) => project.id === 0)
+  );
+
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -52,6 +58,10 @@ const Projects = () => {
           ))}
           <p>{"</section>"}</p>
         </StyledProjectsContainer>
+        <StyledProjectsNext>
+          <ArrowRightCircle size={100} strokeWidth={1} color="#002552" />
+          <h6>NEXT</h6>
+        </StyledProjectsNext>
         <CircleOne></CircleOne>
         <CircleTwo></CircleTwo>
       </StyledProjects>
@@ -69,7 +79,6 @@ const StyledProjects = styled.div`
   width: 100vw;
   background: linear-gradient(to right, #00397f, #26aee5);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   @media (max-width: 1000px) and (orientation: landscape) {
@@ -138,6 +147,18 @@ const StyledProjectsContainer = styled.div`
   }
 `;
 
+const StyledProjectsNext = styled.div`
+  position: absolute;
+  left: 88%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h6 {
+    color: #002552;
+  }
+`;
+
 const CircleOne = styled.div`
   height: 20rem;
   width: 20rem;
@@ -164,7 +185,7 @@ const CircleOne = styled.div`
     display: none;
   }
   @media (orientation: portrait) {
-    top: 215%
+    top: 215%;
   }
 `;
 
@@ -194,7 +215,7 @@ const CircleTwo = styled.div`
     display: none;
   }
   @media (orientation: portrait) {
-    top: 278%
+    top: 278%;
   }
 `;
 
