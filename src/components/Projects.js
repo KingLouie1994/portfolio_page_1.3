@@ -33,6 +33,8 @@ const Projects = () => {
           <ProjectContainer />
           <p>{"</section>"}</p>
         </StyledProjectsContainer>
+        <CircleOne></CircleOne>
+        <CircleTwo></CircleTwo>
       </StyledProjects>
     </React.Fragment>
   );
@@ -50,19 +52,20 @@ const StyledProjects = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   @media (max-width: 1000px) and (orientation: landscape) {
     display: none;
   }
 `;
 
 const StyledProjectsContainer = styled.div`
-  width: 94vw;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: absolute;
   left: 3vw;
-  padding: 1vw 0 1vw 4vw;
+  padding: 1vw 1vw 1vw 4vw;
   p {
     color: #8ed3f4;
     font-family: "La Belle Aurore", cursive;
@@ -114,6 +117,38 @@ const StyledProjectsContainer = styled.div`
   @media (max-width: 600px) and (orientation: portrait) {
     padding: 12vh 1vh 2vh 1vh;
   }
+`;
+
+const CircleOne = styled.div`
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  top: 205%;
+  right: 15%;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 50%;
+  z-index: 1;
+`;
+
+const CircleTwo = styled.div`
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  top: 273%;
+  left: 20%;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 50%;
+  z-index: 1;
 `;
 
 export default Projects;
