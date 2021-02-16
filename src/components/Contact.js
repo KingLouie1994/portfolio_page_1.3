@@ -355,7 +355,7 @@ const StyledContactLeftInput = styled.input`
   @media (max-width: 800px) {
     height: 30px;
   }
-  @media (max-width: 370px) {
+  @media (max-width: 450px) {
     margin: 2px 0 2px 0;
   }
 `;
@@ -379,7 +379,7 @@ const StyledContactLeftTextarea = styled.textarea`
   @media (max-width: 800px) {
     height: 90px;
   }
-  @media (max-width: 370px) {
+  @media (max-width: 450px) {
     height: 45px;
   }
 `;

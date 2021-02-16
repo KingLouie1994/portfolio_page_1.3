@@ -4,6 +4,12 @@ import React, { useState, useEffect } from "react";
 // Imports of components
 import ProjectContainer from "./ProjectContainer";
 
+// Import of external data
+import projectData from "../Data/Projects/Projects";
+
+// Imports of Icons
+import { ArrowRightCircle } from "react-feather";
+
 // Imports for styling
 import styled from "styled-components";
 
@@ -30,7 +36,20 @@ const Projects = () => {
       <StyledProjects style={{ height: dimensions.height }}>
         <StyledProjectsContainer style={{ height: dimensions.height * 0.8 }}>
           <p>{"<section>"}</p>
-          <ProjectContainer />
+          {projectData.map((project) => (
+            <ProjectContainer
+              key={project.id}
+              id={project.id}
+              name={project.name}
+              icon={project.icon}
+              description={project.desciption}
+              role={project.role}
+              techStack={project.techStack}
+              url={project.url}
+              frontend={project.gitHubFrontend}
+              backend={project.gitHubBackend}
+            />
+          ))}
           <p>{"</section>"}</p>
         </StyledProjectsContainer>
         <CircleOne></CircleOne>
@@ -133,6 +152,20 @@ const CircleOne = styled.div`
   );
   border-radius: 50%;
   z-index: 1;
+  @media (max-width: 2100px) {
+    height: 15rem;
+    width: 15rem;
+  }
+  @media (max-width: 1200px) {
+    height: 10rem;
+    width: 10rem;
+  }
+  @media (max-width: 600px) {
+    display: none;
+  }
+  @media (orientation: portrait) {
+    top: 215%
+  }
 `;
 
 const CircleTwo = styled.div`
@@ -140,7 +173,7 @@ const CircleTwo = styled.div`
   width: 20rem;
   position: absolute;
   top: 273%;
-  left: 20%;
+  left: 23%;
   background: white;
   background: linear-gradient(
     to right bottom,
@@ -149,6 +182,20 @@ const CircleTwo = styled.div`
   );
   border-radius: 50%;
   z-index: 1;
+  @media (max-width: 2100px) {
+    height: 15rem;
+    width: 15rem;
+  }
+  @media (max-width: 1200px) {
+    height: 10rem;
+    width: 10rem;
+  }
+  @media (max-width: 600px) {
+    display: none;
+  }
+  @media (orientation: portrait) {
+    top: 278%
+  }
 `;
 
 export default Projects;

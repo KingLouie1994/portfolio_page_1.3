@@ -40,6 +40,7 @@ body{
         -webkit-text-fill-color: #ed6f22;
         -webkit-box-shadow: 0 0 0 0 #002552 inset;
         transition: background-color 5000s ease-in-out 0s;
+        box-shadow: 0 0 0 0 #002552 inset;
     }
     textarea::-webkit-scrollbar {
         width: 0.3rem;
@@ -64,7 +65,7 @@ h1 {
     @media (max-width: 600px) {
         font-size: 40px
     }
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
         font-size: 30px
     }
 }
@@ -74,8 +75,48 @@ h2 {
     @media (max-width: 1200px) {
         font-size: 16px
     }
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
         font-size: 14px
+    }
+}
+
+h3 {
+    font-size: 20px;
+    @media (max-width: 1600px) {
+        font-size: 18px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 16px;
+    }
+}
+
+h4 {
+    font-size: 18px;
+    @media (max-width: 1600px) {
+        font-size: 16px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 12px;
+    }
+}
+
+h5 {
+    font-size: 20px;
+    @media (max-width: 1600px) {
+        font-size: 18px;
+    }
+    @media (max-width: 600px) {
+        font-size: 14px
+    }
+}
+
+h6 {
+    font-size: 16px;
+    @media (max-width: 1600px) {
+        font-size: 14px;
+    }
+    @media (max-width: 600px) {
+        font-size: 12px
     }
 }
 `;
