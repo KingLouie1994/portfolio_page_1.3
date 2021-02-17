@@ -14,9 +14,10 @@ import Contact from "./components/Contact";
 // Imports for styling
 import GlobalStyle from "./styles/GlobalStyle";
 
+ReactGA.initialize(process.env.REACT_APP_MEASUREMENT_ID);
+
 function App() {
   useEffect(() => {
-    ReactGA.initialize(process.env.REACT_APP_MEASUREMENT_ID);
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
