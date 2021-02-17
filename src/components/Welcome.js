@@ -27,20 +27,17 @@ const Welcome = () => {
 
   return (
     <React.Fragment>
-      <NavAnchorWelcome
-        style={{ height: dimensions.height }}
-        id="welcome"
-      ></NavAnchorWelcome>
-      <RejectContainer style={{ height: dimensions.height }}>
-        <Reject style={{ height: dimensions.height * 0.8 }}>
+      <NavAnchorWelcome id="welcome"></NavAnchorWelcome>
+      <RejectContainer>
+        <Reject>
           <RotateCcw size={60} />
           <p style={{ paddingTop: 40 }}>
             Please rotate your phone or use a larger device to visit the site
           </p>
         </Reject>
       </RejectContainer>
-      <StyledWelcome style={{ height: dimensions.height }}>
-        <StyledWelcomeLeft style={{ height: dimensions.height }}>
+      <StyledWelcome>
+        <StyledWelcomeLeft>
           <p style={{ paddingLeft: "1vw" }}>{"<body>"}</p>
           <StyledWelcomeLeftText>
             <StyledWelcomeLeftTextGreeting>
@@ -79,6 +76,7 @@ const Welcome = () => {
 
 // Styled components
 const NavAnchorWelcome = styled.div`
+  height: 100vh;
   position: absolute;
   top: 0vh;
 `;
@@ -125,6 +123,7 @@ const Reject = styled.div`
 
 const StyledWelcome = styled.div`
   width: 100vw;
+  height: 100vh;
   background: linear-gradient(to right, #00397f, #26aee5);
   display: flex;
   @media (max-width: 1000px) and (orientation: landscape) {
@@ -134,6 +133,7 @@ const StyledWelcome = styled.div`
 
 const StyledWelcomeLeft = styled.div`
   width: 50vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
