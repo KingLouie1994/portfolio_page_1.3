@@ -87,6 +87,7 @@ const NavAnchorProjects = styled.div`
 `;
 
 const StyledProjects = styled.div`
+  position: relative;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(to right, #00397f, #26aee5);
@@ -161,7 +162,7 @@ const StyledProjectsContainer = styled.div`
 `;
 
 const StyledProjectsNext = styled.div`
-  position: relative;
+  position: absolute;
   left: 88%;
   z-index: 2;
   display: flex;
@@ -169,7 +170,7 @@ const StyledProjectsNext = styled.div`
   align-items: center;
   @media (orientation: portrait) {
     left: auto;
-    top: 42%;
+    bottom: 5%;
   }
 `;
 
@@ -177,7 +178,7 @@ const CircleOne = styled.div`
   height: 20rem;
   width: 20rem;
   position: absolute;
-  top: 205%;
+  top: 5%;
   right: 15%;
   background: white;
   background: linear-gradient(
@@ -199,7 +200,7 @@ const CircleOne = styled.div`
     display: none;
   }
   @media (orientation: portrait) {
-    top: 215%;
+    top: 15%;
   }
 `;
 
@@ -207,7 +208,7 @@ const CircleTwo = styled.div`
   height: 20rem;
   width: 20rem;
   position: absolute;
-  top: 273%;
+  top: 73%;
   left: 23%;
   background: white;
   background: linear-gradient(
@@ -229,7 +230,7 @@ const CircleTwo = styled.div`
     display: none;
   }
   @media (orientation: portrait) {
-    top: 278%;
+    top: 78%;
   }
 `;
 
