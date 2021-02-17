@@ -21,6 +21,8 @@ function App() {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
+  console.log(process.env.REACT_APP_MEASUREMENT_ID);
+
   return (
     <div>
       <GlobalStyle />
