@@ -16,7 +16,7 @@ import GlobalStyle from "./styles/GlobalStyle";
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize(process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID);
+    ReactGA.initialize(process.env.REACT_APP_MEASUREMENT_ID);
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
