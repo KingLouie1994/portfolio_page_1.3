@@ -161,7 +161,7 @@ const StyledProjectsContainer = styled.div`
 `;
 
 const StyledProjectsNext = styled.div`
-  position: absolute;
+  position: relative;
   left: 88%;
   z-index: 2;
   display: flex;
@@ -169,7 +169,7 @@ const StyledProjectsNext = styled.div`
   align-items: center;
   @media (orientation: portrait) {
     left: auto;
-    top: 287.5%;
+    top: 42%;
   }
 `;
 
