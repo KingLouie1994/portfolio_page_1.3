@@ -79,12 +79,9 @@ const Contact = () => {
 
   return (
     <React.Fragment>
-      <NavAnchorContact
-        style={{ height: dimensions.height }}
-        id="contact"
-      ></NavAnchorContact>
-      <StyledContact style={{ height: dimensions.height }}>
-        <StyledContactLeft style={{ height: dimensions.height }}>
+      <NavAnchorContact id="contact"></NavAnchorContact>
+      <StyledContact>
+        <StyledContactLeft>
           <div></div>
           <StyledContactLeftText>
             <p>{"<h1>"}</p>
@@ -186,12 +183,8 @@ const Contact = () => {
             <p>{"</html>"}</p>
           </div>
         </StyledContactLeft>
-        <StyledContactRight style={{ height: dimensions.height }}>
-          <StyledContactRightPicture
-            src={Location}
-            alt="Profile Picture"
-            style={{ height: dimensions.height }}
-          />
+        <StyledContactRight>
+          <StyledContactRightPicture src={Location} alt="Profile Picture" />
           <StyledContactRightAddress>
             <div>
               <p>Luis Schekerka,</p>
@@ -214,12 +207,14 @@ const Contact = () => {
 
 // Styled components
 const NavAnchorContact = styled.div`
+  height: 100vh;
   position: absolute;
   top: 300vh;
 `;
 
 const StyledContact = styled.div`
   width: 100vw;
+  height: 100vh;
   background: linear-gradient(to right, #00397f, #26aee5);
   display: flex;
   @media (max-width: 1000px) and (orientation: landscape) {
@@ -229,6 +224,7 @@ const StyledContact = styled.div`
 
 const StyledContactLeft = styled.div`
   width: 45vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -390,6 +386,7 @@ const StyledContactLink = styled.a`
 
 const StyledContactRight = styled.div`
   width: 47vw;
+  height: 100vh;
   position: absolute;
   left: 53vw;
   display: flex;
@@ -426,6 +423,7 @@ const StyledContactRight = styled.div`
 
 const StyledContactRightPicture = styled.img`
   width: 100%;
+  height: 100vh;
   object-fit: cover;
   opacity: 0.3;
 `;
@@ -443,10 +441,10 @@ const StyledContactRightAddress = styled.div`
   background-color: #002552;
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
-  div{
+  div {
     padding: 25px;
   }
-  p{
+  p {
     padding-bottom: 5px;
   }
 `;

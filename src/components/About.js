@@ -32,12 +32,9 @@ const About = () => {
   };
   return (
     <React.Fragment>
-      <NavAnchorAbout
-        style={{ height: dimensions.height }}
-        id="about"
-      ></NavAnchorAbout>
-      <StyledAbout style={{ height: dimensions.height }}>
-        <StyledAboutLeft style={{ height: dimensions.height }}>
+      <NavAnchorAbout id="about"></NavAnchorAbout>
+      <StyledAbout>
+        <StyledAboutLeft>
           <StyledAboutLeftText>
             <StyledAboutLeftTextHeading>
               <p>{"<h1>"}</p>
@@ -118,12 +115,8 @@ const About = () => {
             </StyledAboutLeftTextFlow>
           </StyledAboutLeftText>
         </StyledAboutLeft>
-        <StyledAboutRight style={{ height: dimensions.height }}>
-          <StyledAboutRightPicture
-            src={Profile}
-            alt="Profile Picture"
-            style={{ height: dimensions.height * 0.8 }}
-          />
+        <StyledAboutRight>
+          <StyledAboutRightPicture src={Profile} alt="Profile Picture" />
         </StyledAboutRight>
       </StyledAbout>
     </React.Fragment>
@@ -132,12 +125,14 @@ const About = () => {
 
 // Styled components
 const NavAnchorAbout = styled.div`
+  height: 100vh;
   position: absolute;
   top: 100vh;
 `;
 
 const StyledAbout = styled.div`
   width: 100vw;
+  height: 100vh;
   background: linear-gradient(to right, #00397f, #26aee5);
   display: flex;
   @media (max-width: 1000px) and (orientation: landscape) {
@@ -147,6 +142,7 @@ const StyledAbout = styled.div`
 
 const StyledAboutLeft = styled.div`
   width: 50vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -256,6 +252,7 @@ const StyledAboutLink = styled.a`
 
 const StyledAboutRight = styled.div`
   width: 47vw;
+  height: 100vh;
   position: absolute;
   left: 53vw;
   display: flex;
@@ -292,6 +289,7 @@ const StyledAboutRight = styled.div`
 
 const StyledAboutRightPicture = styled.img`
   width: 70%;
+  height: 80vh;
   object-fit: cover;
   @media (max-width: 2100px) and (orientation: landscape) {
     width: 75%;
