@@ -68,6 +68,7 @@ const Projects = () => {
               url={project.url}
               frontend={project.gitHubFrontend}
               backend={project.gitHubBackend}
+              github={project.gitHub}
             />
           ))}
           <p>{"</section>"}</p>
