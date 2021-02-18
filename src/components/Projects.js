@@ -171,7 +171,7 @@ const StyledProjectsNext = styled.div`
   align-items: center;
   @media (orientation: portrait) {
     left: auto;
-    bottom: 5%;
+    bottom: 3%;
   }
 `;
 
