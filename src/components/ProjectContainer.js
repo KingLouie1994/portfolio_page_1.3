@@ -17,6 +17,7 @@ const ProjectContainer = ({
   url,
   frontend,
   backend,
+  github,
 }) => {
   return (
     <Glass>
@@ -45,18 +46,30 @@ const ProjectContainer = ({
             <h6>{role}</h6>
           </Role>
         ) : null}
-        <Backend>
-          <h5>Have a look at the backend:</h5>
-          <a href={backend} target="_blank">
-            <GitHub size={30} strokeWidth={1} color="#002552" />
-          </a>
-        </Backend>
-        <Frontend>
-          <h5>Have a look at the frontend:</h5>
-          <a href={frontend} target="_blank">
-            <GitHub size={30} strokeWidth={1} color="#002552" />
-          </a>
-        </Frontend>
+        {backend && (
+          <Code>
+            <h5>Have a look at the backend:</h5>
+            <a href={backend} target="_blank">
+              <GitHub size={30} strokeWidth={1} color="#002552" />
+            </a>
+          </Code>
+        )}
+        {frontend && (
+          <Code>
+            <h5>Have a look at the frontend:</h5>
+            <a href={frontend} target="_blank">
+              <GitHub size={30} strokeWidth={1} color="#002552" />
+            </a>
+          </Code>
+        )}
+        {github && (
+          <Code>
+            <h5>Have a look at the code:</h5>
+            <a href={github} target="_blank">
+              <GitHub size={30} strokeWidth={1} color="#002552" />
+            </a>
+          </Code>
+        )}
         <Website>
           <h5>Visit the project:</h5>
           <a href={url} target="_blank">
@@ -228,36 +241,7 @@ const Role = styled.div`
   }
 `;
 
-const Backend = styled.div`
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
-  border-radius: 1rem;
-  padding: 20px;
-  margin: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  h5 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: lighter;
-  }
-  a {
-    display: flex;
-    align-items: center;
-  }
-  @media (max-width: 1200px) {
-    padding: 10px;
-    margin: 5px;
-  }
-  @media (max-width: 600px) {
-    border-radius: 0.5rem;
-  }
-`;
-
-const Frontend = styled.div`
+const Code = styled.div`
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
