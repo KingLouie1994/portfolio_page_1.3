@@ -23,10 +23,8 @@ const Projects = () => {
   const handleNextProject = () => {
     if (projectIndex < projectData.length - 1) {
       setProjectIndex(projectIndex + 1);
-      console.log(projectIndex);
     } else {
       setProjectIndex(0);
-      console.log(projectIndex);
     }
   };
 
@@ -63,6 +61,7 @@ const Projects = () => {
               role={project.role}
               techStack={project.techStack}
               url={project.url}
+              project={project.project}
               frontend={project.gitHubFrontend}
               backend={project.gitHubBackend}
               github={project.gitHub}

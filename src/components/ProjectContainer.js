@@ -2,7 +2,7 @@
 import Icon from "../Data/LanguageIcons/Icon";
 
 // Imports of Icons
-import { GitHub, Globe } from "react-feather";
+import { GitHub, Globe, Download } from "react-feather";
 
 // Imports for styling
 import styled from "styled-components";
@@ -15,6 +15,7 @@ const ProjectContainer = ({
   role,
   techStack,
   url,
+  project,
   frontend,
   backend,
   github,
@@ -36,10 +37,12 @@ const ProjectContainer = ({
         </TechStack>
       </Dashboard>
       <Information>
-        <Description>
-          <h5>Description:</h5>
-          <h6>{description}</h6>
-        </Description>
+        {description && (
+          <Description>
+            <h5>Description:</h5>
+            <h6>{description}</h6>
+          </Description>
+        )}
         {role ? (
           <Role>
             <h5>Role:</h5>
@@ -70,12 +73,22 @@ const ProjectContainer = ({
             </a>
           </Code>
         )}
-        <Website>
-          <h5>Visit the project:</h5>
-          <a href={url} target="_blank">
-            <Globe size={30} strokeWidth={1} color="#002552" />
-          </a>
-        </Website>
+        {url && (
+          <Website>
+            <h5>Visit the project:</h5>
+            <a href={url} target="_blank">
+              <Globe size={30} strokeWidth={1} color="#002552" />
+            </a>
+          </Website>
+        )}
+        {project && (
+          <Website>
+            <h5>Download the project:</h5>
+            <a href={project} download={project}>
+              <Download size={30} strokeWidth={1} color="#002552" />
+            </a>
+          </Website>
+        )}
       </Information>
     </Glass>
   );

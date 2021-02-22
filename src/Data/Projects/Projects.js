@@ -1,6 +1,10 @@
 // Import of project icons
 import ZoomIcon from "./Zoom.png";
+import PriceTracker from "./PriceTracker.png";
 import DecksifyIcon from "./Decksify.png";
+
+// Import of projects
+import PriceTrackerZip from "./amazon_pricetracker.zip";
 
 const projectData = [
   {
@@ -17,6 +21,18 @@ const projectData = [
   },
   {
     id: 1,
+    name: "Price Tracker",
+    icon: PriceTracker,
+    desciption:
+      "This project is a pricetracker optimized for the german amazon page. It is built from scratch only using Python and Selenium. The user can setup all parameters like price filter, currency, product name and even base url. To be able to use the script the user needs all dependenies listet in the requirements file.",
+    gitHub: "https://github.com/KingLouie1994/amazon_pricetracker",
+    project: PriceTrackerZip,
+    techStack: ["Python"],
+    role:
+      "This project is my first experience in web scraping. Building everything myself from scratch only using Python and Selenium was fun and a great experience",
+  },
+  {
+    id: 2,
     name: "Decksify",
     icon: DecksifyIcon,
     desciption:
