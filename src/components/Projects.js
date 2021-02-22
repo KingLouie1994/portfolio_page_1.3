@@ -66,6 +66,7 @@ const Projects = () => {
               role={project.role}
               techStack={project.techStack}
               url={project.url}
+              project={project.project}
               frontend={project.gitHubFrontend}
               backend={project.gitHubBackend}
               github={project.gitHub}
