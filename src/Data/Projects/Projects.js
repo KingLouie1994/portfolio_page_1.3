@@ -12,12 +12,12 @@ const projectData = [
     name: "Zoom Clone",
     icon: ZoomIcon,
     desciption:
-      "This project is a Zoom Clone that was about understanding and applying the basics of WebRTC, WebSockets and peer to peer communication.",
+      "This project was about understanding and applying the basics of WebRTC, WebSockets and peer to peer communication. The result is a Zoom clone that masters the most rudimentary functions of its big role model.",
     gitHub: "https://github.com/KingLouie1994/Zoom_Clone_Node",
     url: "https://zoom-clone-fullstack-2021.herokuapp.com/",
     techStack: ["Node", "Express", "Heroku"],
     role:
-      "I built the project on my own to broaden my experience in WebRTC and WebSockets.",
+      "The project is built completely by my own from scratch.",
   },
   {
     id: 1,

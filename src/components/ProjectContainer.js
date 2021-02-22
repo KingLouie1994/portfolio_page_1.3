@@ -138,6 +138,9 @@ const Intro = styled.div`
   align-items: center;
   padding: 25px 0 50px 0;
   font-family: "Julius Sans One", sans-serif;
+  h3 {
+    text-align: center;
+  }
   @media (max-width: 600px) {
     padding: 5px 0 10px 0;
   }
@@ -191,7 +194,7 @@ const Language = styled.div`
 const Information = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex: 3;
   margin: 3rem;
   @media (max-width: 1200px) {
