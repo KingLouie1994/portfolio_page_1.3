@@ -23,10 +23,8 @@ const Projects = () => {
   const handleNextProject = () => {
     if (projectIndex < projectData.length - 1) {
       setProjectIndex(projectIndex + 1);
-      console.log(projectIndex);
     } else {
       setProjectIndex(0);
-      console.log(projectIndex);
     }
   };
 

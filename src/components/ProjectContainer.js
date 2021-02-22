@@ -6,7 +6,6 @@ import { GitHub, Globe, Download } from "react-feather";
 
 // Imports for styling
 import styled from "styled-components";
-import projectData from "../Data/Projects/Projects";
 
 const ProjectContainer = ({
   id,
@@ -38,10 +37,12 @@ const ProjectContainer = ({
         </TechStack>
       </Dashboard>
       <Information>
-        <Description>
-          <h5>Description:</h5>
-          <h6>{description}</h6>
-        </Description>
+        {description && (
+          <Description>
+            <h5>Description:</h5>
+            <h6>{description}</h6>
+          </Description>
+        )}
         {role ? (
           <Role>
             <h5>Role:</h5>
