@@ -1,4 +1,5 @@
 // Import of project icons
+import SlackIcon from "./Slack.png";
 import ZoomIcon from "./Zoom.png";
 import PriceTracker from "./PriceTracker.png";
 import DecksifyIcon from "./Decksify.png";
@@ -9,6 +10,18 @@ import PriceTrackerZip from "./amazon_pricetracker.zip";
 const projectData = [
   {
     id: 0,
+    name: "Slack Clone",
+    icon: SlackIcon,
+    desciption:
+      "A Slack clone that includes the main functionality of the real slack. The real-time chat in the different channels is my personal highlight. The backend is provided by Firebase.",
+    gitHub: "https://github.com/KingLouie1994/slack-clone-frontend",
+    url: "https://slack-clone-frontend.vercel.app/",
+    techStack: ["JavaScript", "React", "Firebase"],
+    role:
+      "This project was created just by my own as part of a ReactJS Challenge by Clever Programmer. Over 5 days, several hours a day were spent working on it and implementing various features.",
+  },
+  {
+    id: 1,
     name: "Zoom Clone",
     icon: ZoomIcon,
     desciption:
@@ -16,11 +29,10 @@ const projectData = [
     gitHub: "https://github.com/KingLouie1994/Zoom_Clone_Node",
     url: "https://zoom-clone-fullstack-2021.herokuapp.com/",
     techStack: ["Node", "Express", "Heroku"],
-    role:
-      "The project is built completely by my own from scratch.",
+    role: "The project is built completely by my own from scratch.",
   },
   {
-    id: 1,
+    id: 2,
     name: "Price Tracker",
     icon: PriceTracker,
     desciption:
@@ -32,7 +44,7 @@ const projectData = [
       "This project is my first experience in web scraping. Building everything myself from scratch only using Python and Selenium was fun and a great experience",
   },
   {
-    id: 2,
+    id: 3,
     name: "Decksify",
     icon: DecksifyIcon,
     desciption:
