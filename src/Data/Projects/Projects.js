@@ -1,6 +1,7 @@
 // Import of project icons
 import SlackIcon from "./Slack.png";
 import ZoomIcon from "./Zoom.png";
+import UrlIcon from "./Url.png";
 import PriceTracker from "./PriceTracker.png";
 import DecksifyIcon from "./Decksify.png";
 
@@ -33,6 +34,18 @@ const projectData = [
   },
   {
     id: 2,
+    name: "URL Shortener",
+    icon: UrlIcon,
+    desciption:
+      "The user sends in a long link that is stored in the Database. As a response users get back a short link that holds a 5 figures id at the end. When this link is used a request to the database asks for the URL stored for that 5 figure id, get it and redirects to it.",
+    gitHub: "https://github.com/KingLouie1994/url-shortener",
+    url: "https://url-shortener-node-2021.herokuapp.com/",
+    techStack: ["Vue", "Node", "Express", "MongoDB", "Heroku"],
+    role:
+      "I did this project to practice my Node and Express skills and to get some first experience with Vue.",
+  },
+  {
+    id: 3,
     name: "Price Tracker",
     icon: PriceTracker,
     desciption:
@@ -44,7 +57,7 @@ const projectData = [
       "This project is my first experience in web scraping. Building everything myself from scratch only using Python and Selenium was fun and a great experience",
   },
   {
-    id: 3,
+    id: 4,
     name: "Decksify",
     icon: DecksifyIcon,
     desciption:
