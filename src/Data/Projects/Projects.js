@@ -7,7 +7,7 @@ import PriceTracker from "./PriceTracker.png";
 import DecksifyIcon from "./Decksify.png";
 
 // Import of projects
-import BlockchainZip from "./blockchain.zip";
+import BlockChainZip from "./blockchain_project.zip";
 import PriceTrackerZip from "./amazon_pricetracker.zip";
 
 const projectData = [
@@ -53,7 +53,7 @@ const projectData = [
     desciption:
       "The blockchain can create wallets consisting of public and private keys, mine blocks, perform transactions between users, display open transactions as well as previous blocks, and detect and prevent attacks on the blocks already created.",
     gitHub: "https://github.com/KingLouie1994/python_blockchain_project",
-    project: BlockchainZip,
+    project: BlockChainZip,
     techStack: ["Vue", "Python", "Flask"],
     role:
       "The blockchain I built in this project is the final work of a Python course I participated in. The course included all the basics about Python, Flask and Blockchain.",
