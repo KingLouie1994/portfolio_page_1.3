@@ -2,10 +2,12 @@
 import SlackIcon from "./Slack.png";
 import ZoomIcon from "./Zoom.png";
 import UrlIcon from "./Url.png";
+import BlockchainIcon from "./Blockchain.png";
 import PriceTracker from "./PriceTracker.png";
 import DecksifyIcon from "./Decksify.png";
 
 // Import of projects
+import BlockchainZip from "./blockchain.zip";
 import PriceTrackerZip from "./amazon_pricetracker.zip";
 
 const projectData = [
@@ -46,6 +48,18 @@ const projectData = [
   },
   {
     id: 3,
+    name: "Blockchain",
+    icon: BlockchainIcon,
+    desciption:
+      "The blockchain can create wallets consisting of public and private keys, mine blocks, perform transactions between users, display open transactions as well as previous blocks, and detect and prevent attacks on the blocks already created.",
+    gitHub: "https://github.com/KingLouie1994/python_blockchain_project",
+    project: BlockchainZip,
+    techStack: ["Vue", "Python", "Flask"],
+    role:
+      "The blockchain I built in this project is the final work of a Python course I participated in. The course included all the basics about Python, Flask and Blockchain.",
+  },
+  {
+    id: 4,
     name: "Price Tracker",
     icon: PriceTracker,
     desciption:
@@ -57,7 +71,7 @@ const projectData = [
       "This project is my first experience in web scraping. Building everything myself from scratch only using Python and Selenium was fun and a great experience",
   },
   {
-    id: 4,
+    id: 5,
     name: "Decksify",
     icon: DecksifyIcon,
     desciption:
