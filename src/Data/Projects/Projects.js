@@ -2,6 +2,7 @@
 import SlackIcon from "./Slack.png";
 import ZoomIcon from "./Zoom.png";
 import UrlIcon from "./Url.png";
+import MemoriesIcon from "./Memories.png";
 import BlockchainIcon from "./Blockchain.png";
 import PriceTracker from "./PriceTracker.png";
 import DecksifyIcon from "./Decksify.png";
@@ -48,6 +49,18 @@ const projectData = [
   },
   {
     id: 3,
+    name: "Memories",
+    icon: MemoriesIcon,
+    desciption:
+      "This is a mobile first designed Ionic React App. The App includes all basic Ionic features as well as capacitor. The user can add good and bad memories containing a title and an image with the devices camera accessed via capacitor. The memories are safed on the device and not on an external database.",
+    gitHub: "https://github.com/KingLouie1994/ionic-react-memories",
+    url: "https://ionic-react-memories.vercel.app/",
+    techStack: ["TypeScript", "React", "Ionic"],
+    role:
+      "This app is my third experience with Ionic. As a part of an online course I worked with capacitor for the first time to access built in devices like the camera or the microphone.",
+  },
+  {
+    id: 4,
     name: "Blockchain",
     icon: BlockchainIcon,
     desciption:
@@ -59,7 +72,7 @@ const projectData = [
       "The blockchain I built in this project is the final work of a Python course I participated in. The course included all the basics about Python, Flask and Blockchain.",
   },
   {
-    id: 4,
+    id: 5,
     name: "Price Tracker",
     icon: PriceTracker,
     desciption:
@@ -71,7 +84,7 @@ const projectData = [
       "This project is my first experience in web scraping. Building everything myself from scratch only using Python and Selenium was fun and a great experience",
   },
   {
-    id: 5,
+    id: 6,
     name: "Decksify",
     icon: DecksifyIcon,
     desciption:
