@@ -7,6 +7,7 @@ import { animateScroll as scroll } from "react-scroll";
 // Import of external data
 import Resume from "../Data/Resume.pdf";
 import Profile from "../Data/Photo.jpeg";
+import Certificates from "../Data/LS_Certificates.pdf";
 
 // Imports for styling
 import styled from "styled-components";
@@ -89,6 +90,15 @@ const About = () => {
                 >
                   resume
                 </StyledAboutLink>{" "}
+                and{" "}
+                <StyledAboutLink
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={Certificates}
+                  style={{ color: "#ed6f22" }}
+                >
+                  certificates
+                </StyledAboutLink>
                 , checkout my{" "}
                 <StyledAboutLink
                   target="_blank"
