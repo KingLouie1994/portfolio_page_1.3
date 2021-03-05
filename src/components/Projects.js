@@ -8,7 +8,7 @@ import ProjectContainer from "./ProjectContainer";
 import projectData from "../Data/Projects/Projects";
 
 // Imports of Icons
-import { ArrowRightCircle } from "react-feather";
+import { ArrowRightCircle, ArrowLeftCircle } from "react-feather";
 
 // Imports for styling
 import styled from "styled-components";
@@ -19,6 +19,14 @@ const Projects = () => {
   const [project, setProject] = useState(
     projectData.filter((project) => project.id === projectIndex)
   );
+
+  const handleBeforeProject = () => {
+    if (projectIndex > 0) {
+      setProjectIndex(projectIndex - 1);
+    } else {
+      setProjectIndex(projectData.length - 1);
+    }
+  };
 
   const handleNextProject = () => {
     if (projectIndex < projectData.length - 1) {
@@ -49,6 +57,9 @@ const Projects = () => {
     <React.Fragment>
       <NavAnchorProjects id="projects"></NavAnchorProjects>
       <StyledProjects>
+        <StyledProjectsBefore onClick={handleBeforeProject}>
+          <ArrowLeftCircle size={60} strokeWidth={1} color="#8ed3f4" />
+        </StyledProjectsBefore>
         <StyledProjectsContainer>
           <p>{"<section>"}</p>
           {project.map((project) => (
@@ -70,7 +81,7 @@ const Projects = () => {
           <p>{"</section>"}</p>
         </StyledProjectsContainer>
         <StyledProjectsNext onClick={handleNextProject}>
-          <ArrowRightCircle size={80} strokeWidth={1} color="#002552" />
+          <ArrowRightCircle size={60} strokeWidth={1} color="#002552" />
         </StyledProjectsNext>
         <CircleOne></CircleOne>
         <CircleTwo></CircleTwo>
@@ -100,41 +111,48 @@ const StyledProjects = styled.div`
 `;
 
 const StyledProjectsContainer = styled.div`
+  position: absolute;
   width: 80vw;
   height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: absolute;
-  left: 3vw;
+  left: 10vw;
   padding: 1vw 1vw 1vw 4vw;
   p {
+    margin-left: -7vw;
     color: #8ed3f4;
     font-family: "La Belle Aurore", cursive;
   }
   @media (max-width: 2100px) and (orientation: landscape) {
-    width: 93;
-    left: 3.5vw;
+    p {
+      margin-left: -6.5vw;
+    }
   }
   @media (max-width: 1900px) and (orientation: landscape) {
-    width: 92;
-    left: 4vw;
+    p {
+      margin-left: -6vw;
+    }
   }
   @media (max-width: 1700px) and (orientation: landscape) {
-    width: 91;
-    left: 4.5vw;
+    p {
+      margin-left: -5.5vw;
+    }
   }
   @media (max-width: 1600px) and (orientation: landscape) {
-    width: 90;
-    left: 5vw;
+    p {
+      margin-left: -5vw;
+    }
   }
   @media (max-width: 1400px) and (orientation: landscape) {
-    width: 89;
-    left: 5.5vw;
+    p {
+      margin-left: -4.5vw;
+    }
   }
   @media (max-width: 1200px) and (orientation: landscape) {
-    width: 88;
-    left: 6vw;
+    p {
+      margin-left: -4vw;
+    }
   }
   @media (orientation: portrait) {
     right: 3vw;
@@ -163,14 +181,32 @@ const StyledProjectsContainer = styled.div`
 
 const StyledProjectsNext = styled.div`
   position: absolute;
-  left: 88%;
+  right: 7vw;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 1200px) and (orientation: landscape) {
+    right: 5vw;
+  }
   @media (orientation: portrait) {
     left: auto;
     bottom: 3%;
+  }
+`;
+
+const StyledProjectsBefore = styled.div`
+  position: absolute;
+  left: 10vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 1200px) and (orientation: landscape) {
+    left: 8vw;
+  }
+  @media (orientation: portrait) {
+    display: none;
   }
 `;
 
