@@ -151,6 +151,7 @@ const ProjectIcon = styled.img`
   width: 100px;
   height: auto;
   margin: 25px;
+  border-radius: 10px;
   @media (max-width: 2100px) {
     width: 80px;
   }
