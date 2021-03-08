@@ -155,9 +155,11 @@ const StyledProjectsContainer = styled.div`
     }
   }
   @media (orientation: portrait) {
-    right: 3vw;
-    width: 94vw;
+    width: 85vw;
     padding: 5vh 1vh 2vh 1vh;
+    p {
+    margin-left: -4vw;
+  }
   }
   @media (max-width: 1800px) and (orientation: portrait) {
     padding: 7vh 1vh 2vh 1vh;
@@ -190,7 +192,8 @@ const StyledProjectsNext = styled.div`
     right: 5vw;
   }
   @media (orientation: portrait) {
-    left: auto;
+    right: 0;
+    left: 0;
     bottom: 3%;
   }
 `;
