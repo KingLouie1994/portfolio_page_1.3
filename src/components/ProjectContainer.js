@@ -142,6 +142,9 @@ const Intro = styled.div`
   h3 {
     text-align: center;
   }
+  @media (max-width: 2000px) {
+    padding: 15px 0 30px 0;
+  }
   @media (max-width: 600px) {
     padding: 5px 0 10px 0;
   }
@@ -169,6 +172,9 @@ const TechStack = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 25px;
+  @media (max-width: 2000px) {
+    padding: 5px;
+  }
   @media (max-width: 600px) {
     padding: 10px;
   }
@@ -199,6 +205,9 @@ const Information = styled.div`
   justify-content: space-between;
   flex: 3;
   margin: 3rem;
+  @media (max-width: 1800px) {
+    margin: 0.5rem;
+  }
   @media (max-width: 1200px) {
     margin: 0.5rem;
   }
