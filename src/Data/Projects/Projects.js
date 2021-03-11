@@ -1,4 +1,5 @@
 // Import of project icons
+import LocationTrackerIcon from "./LocationTracker.png";
 import SlackIcon from "./Slack.png";
 import ZoomIcon from "./Zoom.png";
 import UrlIcon from "./Url.png";
@@ -14,6 +15,21 @@ import PriceTrackerZip from "./amazon_pricetracker.zip";
 const projectData = [
   {
     id: 0,
+    name: "Location Tracker",
+    icon: LocationTrackerIcon,
+    desciption:
+      "This application offers the possibility to save locations. To be able to do this, the user must register and log in. The address, which is entered when creating a location, is automatically translated into coordinates by the Google Maps API and the location can be viewed on a map.",
+    gitHubFrontend:
+      "https://github.com/KingLouie1994/Frontend-MERN-LocationTracker",
+    gitHubBackend:
+      "https://github.com/KingLouie1994/Backend-MERN-LocationTracker",
+    url: "https://mern-location-tracker.vercel.app/",
+    techStack: ["React", "Node", "Express", "MongoDB", "Google", "Amazon"],
+    role:
+      "Building a Full Stack MERN Application with authentication, file uploads, hashing of passwords and a third party API like the Google Maps API in this case using best practice for all parts",
+  },
+  {
+    id: 1,
     name: "Slack Clone",
     icon: SlackIcon,
     desciption:
@@ -25,7 +41,7 @@ const projectData = [
       "This project was created just by my own as part of a ReactJS Challenge by Clever Programmer. Over 5 days, several hours a day were spent working on it and implementing various features.",
   },
   {
-    id: 1,
+    id: 2,
     name: "Zoom Clone",
     icon: ZoomIcon,
     desciption:
@@ -36,7 +52,7 @@ const projectData = [
     role: "The project is built completely by my own from scratch.",
   },
   {
-    id: 2,
+    id: 3,
     name: "URL Shortener",
     icon: UrlIcon,
     desciption:
@@ -48,7 +64,7 @@ const projectData = [
       "I did this project to practice my Node and Express skills and to get some first experience with Vue.",
   },
   {
-    id: 3,
+    id: 4,
     name: "Memories",
     icon: MemoriesIcon,
     desciption:
@@ -60,7 +76,7 @@ const projectData = [
       "This app is my third experience with Ionic. As a part of an online course I worked with capacitor for the first time to access built in devices like the camera or the microphone.",
   },
   {
-    id: 4,
+    id: 5,
     name: "Blockchain",
     icon: BlockchainIcon,
     desciption:
@@ -72,7 +88,7 @@ const projectData = [
       "The blockchain I built in this project is the final work of a Python course I participated in. The course included all the basics about Python, Flask and Blockchain.",
   },
   {
-    id: 5,
+    id: 6,
     name: "Price Tracker",
     icon: PriceTracker,
     desciption:
@@ -84,7 +100,7 @@ const projectData = [
       "This project is my first experience in web scraping. Building everything myself from scratch only using Python and Selenium was fun and a great experience",
   },
   {
-    id: 6,
+    id: 7,
     name: "Decksify",
     icon: DecksifyIcon,
     desciption:
