@@ -7,6 +7,7 @@ import MemoriesIcon from "./Memories.png";
 import BlockchainIcon from "./Blockchain.png";
 import PriceTracker from "./PriceTracker.png";
 import DecksifyIcon from "./Decksify.png";
+import MusicPlayerIcon from "./MusicPlayer.png";
 
 // Import of projects
 import BlockChainZip from "./blockchain_project.zip";
@@ -30,18 +31,6 @@ const projectData = [
   },
   {
     id: 1,
-    name: "Slack Clone",
-    icon: SlackIcon,
-    desciption:
-      "A Slack clone that includes the main functionality of the real slack. The real-time chat in the different channels is my personal highlight. The backend is provided by Firebase.",
-    gitHub: "https://github.com/KingLouie1994/slack-clone-frontend",
-    url: "https://slack-clone-frontend.vercel.app/",
-    techStack: ["JavaScript", "React", "Firebase"],
-    role:
-      "This project was created just by my own as part of a ReactJS Challenge by Clever Programmer. Over 5 days, several hours a day were spent working on it and implementing various features.",
-  },
-  {
-    id: 2,
     name: "Zoom Clone",
     icon: ZoomIcon,
     desciption:
@@ -52,7 +41,7 @@ const projectData = [
     role: "The project is built completely by my own from scratch.",
   },
   {
-    id: 3,
+    id: 2,
     name: "URL Shortener",
     icon: UrlIcon,
     desciption:
@@ -64,7 +53,7 @@ const projectData = [
       "I did this project to practice my Node and Express skills and to get some first experience with Vue.",
   },
   {
-    id: 4,
+    id: 3,
     name: "Memories",
     icon: MemoriesIcon,
     desciption:
@@ -74,6 +63,18 @@ const projectData = [
     techStack: ["TypeScript", "React", "Ionic"],
     role:
       "This app is my third experience with Ionic. As a part of an online course I worked with capacitor for the first time to access built in devices like the camera or the microphone.",
+  },
+  {
+    id: 4,
+    name: "Slack Clone",
+    icon: SlackIcon,
+    desciption:
+      "A Slack clone that includes the main functionality of the real slack. The real-time chat in the different channels is my personal highlight. The backend is provided by Firebase.",
+    gitHub: "https://github.com/KingLouie1994/slack-clone-frontend",
+    url: "https://slack-clone-frontend.vercel.app/",
+    techStack: ["JavaScript", "React", "Firebase"],
+    role:
+      "This project was created just by my own as part of a ReactJS Challenge by Clever Programmer. Over 5 days, several hours a day were spent working on it and implementing various features.",
   },
   {
     id: 5,
@@ -107,10 +108,21 @@ const projectData = [
       "A flashcard application to make everybody’s study-sessions more effective, while saving them time and money",
     gitHubFrontend: "https://github.com/Labs-EU4/flashcards-client",
     gitHubBackend: "https://github.com/Labs-EU4/flashcards-server",
-    url: "https://app.decksify.com/",
     techStack: ["JavaScript", "React", "Redux", "Express", "Postgresql"],
     role:
       "The project was developed within 6 weeks in a team of 6 people. Since this project was a learning project, the tasks were not clearly distributed, but everyone worked on everything. Most of the time I worked on the dashboard, which contains the vertical navigation, the list of own decks, the recent decks and the possibility to create new decks. The thing I'm most proud of in this project is the Game Mode, which you can use with your own decks as well as with public decks to test your knowledge in the respective subject.",
+  },
+  {
+    id: 8,
+    name: "React Music",
+    icon: MusicPlayerIcon,
+    desciption:
+      "This React app is a music player that allows the user to pause, skip and start songs directly from a static playlist. So the player contains all the basic functions.",
+    gitHub: "https://github.com/KingLouie1994/react-music-player",
+    url: "https://react-music-player-nine.vercel.app/",
+    techStack: ["JavaScript", "React"],
+    role:
+      "To gain experience with sounds in a React app, and to create a project focused on responsiveness and design in general, I developed this music player.",
   },
 ];
 
