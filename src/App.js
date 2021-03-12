@@ -4,6 +4,9 @@ import React, { useEffect } from "react";
 // Imports from third party libraries
 import ReactGA from "react-ga";
 
+// Import of meta tag library
+import MetaTags from "react-meta-tags";
+
 // Imports of components
 import Navigation from "./components/Navigation";
 import Welcome from "./components/Welcome";
@@ -23,6 +26,19 @@ function App() {
 
   return (
     <div>
+      <MetaTags>
+        <title>LS | Full Stack Developer</title>
+        <meta
+          id="meta-description"
+          name="description"
+          content="Front End & Back End Developer - Focus on Web and Mobile - For small and large projects of all kinds"
+        />
+        <meta
+          id="og-title"
+          property="og:title"
+          content="LS | Full Stack Developer"
+        />
+      </MetaTags>
       <GlobalStyle />
       <Navigation />
       <Welcome />
