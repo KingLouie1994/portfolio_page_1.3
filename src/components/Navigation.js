@@ -10,6 +10,9 @@ import { Linkedin, GitHub, Home, User, Eye, Mail } from "react-feather";
 // Imports for styling
 import styled from "styled-components";
 
+// Import of Logo
+import Logo from "../Data/Logo.png";
+
 const Navigation = () => {
   const [hoverStatusHome, setHoverStatusHome] = useState(false);
   const [hoverStatusAbout, setHoverStatusAbout] = useState(false);
@@ -21,7 +24,9 @@ const Navigation = () => {
 
   return (
     <StyledNavigation>
-      <StyledNavigationLogo>Logo</StyledNavigationLogo>
+      <StyledNavigationLogo>
+        <img src={Logo} alt="logo" />
+      </StyledNavigationLogo>
       <StyledNavigationAnchors>
         <ul>
           <li
@@ -211,13 +216,23 @@ const StyledNavigationLogo = styled.div`
   left: 0;
   width: 100%;
   height: 7%;
-  background: black;
-  // Just as long as there is no logo
-  font-family: "Julius Sans One", sans-serif;
-  padding: 10px;
+  img {
+    width: 100%;
+    height: auto;
+  }
   @media (orientation: portrait) {
+    width: 10%;
     height: 100%;
-    width: auto;
+    img {
+      height: 100%;
+    }
+  }
+  @media (max-width: 800px) and (orientation: portrait) {
+    width: 16%;
+    height: 100%;
+    img {
+      height: 100%;
+    }
   }
 `;
 
